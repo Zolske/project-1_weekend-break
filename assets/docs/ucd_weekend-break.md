@@ -114,8 +114,8 @@
 <img src="../images/doc/des_4_package.webp" alt="wireframe package page">
 *wireframe booking page*
 <img src="../images/doc/des_5_booking.webp" alt="wireframe booking page">
-*wireframe testimonies page*
-<img src="../images/doc/des_6_testimonies.webp" alt="wireframe testimonies page">
+*wireframe our stories page*
+<img src="../images/doc/des_6_our_stories.webp" alt="wireframe our stories page">
 *wireframe feedback page*
 <img src="../images/doc/des_7_feedback.webp" alt="wireframe feedback page">
 *wireframe FAQ page*
@@ -144,9 +144,9 @@
 
 <img width="500px"  src="../images/doc/mob_5_booking.webp" alt="wireframe booking page">
 
-*mobile wireframe testimonies page*
+*mobile wireframe our stories page*
 
-<img width="500px"  src="../images/doc/mob_6_our_stories.webp" alt="wireframe testimonies page">
+<img width="500px"  src="../images/doc/mob_6_our_stories.webp" alt="wireframe our stories page">
 
 *mobile wireframe feedback page*
 
