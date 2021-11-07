@@ -3,7 +3,7 @@
 ## Learning Outcomes
  1.0|tick|description 
  -|-|-
- O1|[ ]|Design an interactive Front-End web application using HTML and CSS based on the principles of user experience design, accessibility and responsivity
+ LO1|[ ]|Design an interactive Front-End web application using HTML and CSS based on the principles of user experience design, accessibility and responsivity
 LO2|[ ]|Test a Front-End web application through the development, implementation and deployment stages
 LO3|[ ]|Deploy a Front-End web application to a Cloud platform
 LO4|[ ]|Maximise future maintainability through documentation, code structure and organisation
