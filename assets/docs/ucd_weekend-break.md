@@ -146,7 +146,7 @@
 
 *mobile wireframe testimonies page*
 
-<img width="500px"  src="../images/doc/mob_6_testimonies.webp" alt="wireframe testimonies page">
+<img width="500px"  src="../images/doc/mob_6_our_stories.webp" alt="wireframe testimonies page">
 
 *mobile wireframe feedback page*
 
