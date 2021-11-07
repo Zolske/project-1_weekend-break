@@ -53,8 +53,8 @@
         *(to keep user interested)*
     - **"booking"** :
         - contains form to place the order for the weekend package
-    - **"testimonies"** :
-        - contains form to submit testimonies
+    - **"our stories"** :
+        - user can upload and share there stories
         - offer discount for users who share their experience
         - motivate and inspirer other users
     - **"feedback"** :
