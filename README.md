@@ -1,4 +1,6 @@
-# Weekend break
+<img src="assets/images/doc/weekend-breaker_logo.png" alt="company logo, a drawing of a sun, a palm and the sea">
+
+# Weekend breaker
 
 The website offers 3 different weekend break packages for the user to choose from. We take care of the accommodation and plan the activity's. Every month there are 3 new packages.
 
