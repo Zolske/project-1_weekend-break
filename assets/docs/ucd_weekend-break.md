@@ -160,6 +160,7 @@
 ---
 ## 5. The Surface
 <hr>
+
 ### **website / company logo :**
 
 <img src="../images/doc/weekend-breaker_logo.png" alt="company logo, a drawing of a sun, a palm and the sea">
