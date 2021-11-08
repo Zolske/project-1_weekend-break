@@ -159,6 +159,26 @@
 
 ---
 ## 5. The Surface
+<hr>
+### **website / company logo :**
+
+<img src="../images/doc/weekend-breaker_logo.png" alt="company logo, a drawing of a sun, a palm and the sea">
+
+The sun, the palm and the beach are symbolic for holidays. They help to convey the meaning of the website. The slogan "You deserve it!" is helping to justify the purchase to the consumer.
+
+<img src="../images/doc/weekend-breaker_logo_icon.png" alt="company icon, a drawing of a sun, a palm and the sea">
+
+The icon is sourced from: [iconfinder.com](https://www.iconfinder.com/search?q=travel&price=free), Creator: Fajar Sullivan
+
+<img src="../images/doc/weekend-breaker_logo_title.png" alt="company title, Weekend Breaker">
+
+**Font:** east see dokdo **Color:** hex #e69138
+
+<img src="../images/doc/weekend-breaker_logo_slogan.png" alt="company slogan, You deserve it!">
+
+**Font:** Josefin Sans **Color:** hex #000000
+<hr>
+
 "missing color pattern"
 "missing font family"
 "missing icon style"
