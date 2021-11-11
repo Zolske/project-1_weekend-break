@@ -1,7 +1,12 @@
+html {
+  /* 62.5% of 16px == 10px */
+  font-size: 62.5%;
+}
+
 /* >>> start normalize browser default display on all types of browsers */
 HTML, body {
     margin: 0px;
     padding: 0px;
-      border: 0px;
+    border: 0px;
     }
 /* <<< end normalize browser default display on all types of browsers */
