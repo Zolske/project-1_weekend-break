@@ -63,14 +63,18 @@ header {
 
 /* <<< end header */
 
-/* >>> start card  */
-.card {
+/* >>> start section class element */
+.element {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 30rem;
   margin: auto;
+  margin-top: 1rem;
   text-align: center;
 }
 
+/* <<< end section class element */
+
+/* >>> start card  */
 .card img {
   width: 26rem;
   height: 15rem;
@@ -78,6 +82,10 @@ header {
   border: 1rem solid white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
+}
+
+.card p {
+  margin: 1rem;
 }
 
 /* >>> start button  */
@@ -121,8 +129,15 @@ header {
 }
 
 /* <<< end button */
-
 /* <<< end card */
+
+/* >>> start display inline block for summary heading */
+summary h2,
+summary h3 {
+  display: inline-block;
+}
+
+/* <<< end display inline block for summary heading */
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
