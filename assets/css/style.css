@@ -55,7 +55,7 @@ nav>i {
 /* <<< end nav bar */
 
 /* >>> start header */
-header {
+.header__page {
   background-color: #fff;
   background-image: url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
   background-size: auto;
@@ -139,6 +139,58 @@ summary h3 {
 
 /* <<< end display inline block for summary heading */
 
+/* >>> start user rating testimonies */
+.checked {
+  color: orange;
+}
+
+.user {}
+
+.user header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user img {
+  display: inline-block;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 1rem;
+  float: left;
+}
+
+.user h3 {
+  margin-bottom: 0.1rem;
+  font-size: 1.8rem;
+}
+
+.user figcaption+p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.user blockquote {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin: 0 3.5rem 3rem 3.5rem;
+  height: 14.5rem;
+}
+
+/* <<< end user rating testimonies */
+.socialmedia {
+  font-size: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socialmedia i {
+  color: var(--color-headings);
+}
+
+/* >>> start social media links */
+
+/* <<< end social media links */
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
 /* breakpoint for tablets 2 column at 500px == font size standard 16px == 31.5em */
