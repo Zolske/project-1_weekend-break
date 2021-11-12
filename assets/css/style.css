@@ -37,6 +37,7 @@ h3 {
   font-size: 2.0rem;
 }
 
+/* >>> start nav bar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -51,11 +52,76 @@ nav>i {
   width: 4rem;
 }
 
+/* <<< end nav bar */
+
+/* >>> start header */
 header {
   background-color: #fff;
   background-image: url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
   background-size: auto;
 }
+
+/* <<< end header */
+
+/* >>> start card  */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 30rem;
+  margin: auto;
+  text-align: center;
+}
+
+.card img {
+  width: 26rem;
+  height: 15rem;
+  object-fit: contain;
+  border: 1rem solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/* >>> start button  */
+.button {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 2rem;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+/* <<< end button */
+
+/* <<< end card */
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
