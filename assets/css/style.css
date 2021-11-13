@@ -179,6 +179,25 @@ summary h3 {
 
 /* <<< end user rating testimonies */
 
+/* >>> start contact us */
+.contact {}
+
+.contact li {
+  list-style-type: none;
+}
+
+.contact>li {
+  /* text-decoration: underline; */
+  font-weight: bolder;
+  font-size: 2.2rem;
+  ;
+}
+
+.contact>li>ul>li {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
 
 /* >>> start map for contact us  */
 #map {
@@ -188,6 +207,7 @@ summary h3 {
 }
 
 /* <<< end map for contacts */
+/* >>> end contact us */
 
 /* >>> start social media */
 .socialmedia {
