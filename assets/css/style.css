@@ -23,6 +23,7 @@ h1,
 h2,
 h3 {
   color: var(--color-headings);
+  margin-top: 1rem;
 }
 
 h1 {
@@ -41,6 +42,10 @@ h3 {
   font-style: italic;
   text-decoration: underline;
   text-decoration-style: double;
+}
+
+p {
+  margin: 2rem;
 }
 
 /* >>> start nav bar */
@@ -192,6 +197,36 @@ summary h3 {
 
 /* <<< end faq */
 
+/* >>> start about us */
+.profile_me {
+  height: 10rem;
+  width: auto;
+  border-radius: 50%;
+  float: left;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+
+/* clears the float after the p element */
+.about_us p:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.about_us em {
+  font-weight: bolder;
+}
+
+.profile_team {
+  margin: 1rem;
+  margin-left: 2rem;
+  border-radius: 10%;
+  float: left;
+}
+
+/* <<< end about us */
+
 /* >>> start contact us */
 .contact>li {
   font-weight: bolder;
@@ -210,7 +245,8 @@ summary h3 {
 #map {
   height: 20rem;
   /* The height is 400 pixels */
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
 /* <<< end map for contacts */
