@@ -178,6 +178,18 @@ summary h3 {
 }
 
 /* <<< end user rating testimonies */
+
+
+/* >>> start map for contact us  */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+}
+
+/* <<< end map for contacts */
+
+/* >>> start social media */
 .socialmedia {
   font-size: 6rem;
   display: flex;
@@ -188,7 +200,7 @@ summary h3 {
   color: var(--color-headings);
 }
 
-/* >>> start social media links */
+/* <<< end social media links */
 
 /* >>> start copy right */
 .copy {

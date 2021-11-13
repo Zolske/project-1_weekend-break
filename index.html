@@ -10,7 +10,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- sets different browser styles to basic -->
     <link rel="stylesheet" href="assets/css/normalize.css">
-
     <!-- link to stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Weekend Break</title>
@@ -258,10 +257,12 @@
             </details>
         </section>
         <section class="element">
-            <details>
+            <details open>
                 <summary>
                     <h2><i class="fas fa-address-book"></i> contact us</h2>
                 </summary>
+                <!--The div element for the map -->
+                <div id="map"></div>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora voluptas soluta, omnis
                     necessitatibus
@@ -283,12 +284,19 @@
             <p>"Weekend Breaker"&reg; is a Registered Tradmark @ Zoltán Kepes<br>&copy; All rights reserved</p>
         </section>
     </footer>
+
     <!-- connection to "Font Awesome" -->
     <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>
     <!-- connection to "bootstarp" -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <!-- links to google map JavaScrit, was original in html document, but I have separated it -->
+    <script src="assets/js/google_map.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArHdgy90eH5f6Qu5z_1BQkI3cYAyNVshk&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABCDE"
+        async defer></script>
 </body>
 
 </html>
