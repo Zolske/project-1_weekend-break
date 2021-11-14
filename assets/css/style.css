@@ -1,8 +1,8 @@
 :root {
-  --color-primary: #2584ff;
-  --color-secondary: #00d9ff;
-  --color-accent: #ff3400;
-  --color-headings: #1b0760;
+  --color-primary: #EDFFEC;
+  --color-secondary: #7C6A0A;
+  --color-accent: #FA9500;
+  --color-headings: #EB6424;
   --color-body: #918ca4;
 }
 
@@ -46,6 +46,7 @@ h3 {
 
 p {
   margin: 2rem;
+  color: var(--color-body);
 }
 
 /* >>> start nav bar */
@@ -86,11 +87,50 @@ nav>i {
 /* <<< end section class element */
 
 /* >>> start card  */
+.tablink {
+  background: rgb(237, 255, 236);
+  background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(235, 100, 36, 1) 54%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  /* float: left; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 17px;
+  width: 32%;
+  display: inline-block;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: var(--color-primary);
+  display: none;
+}
+
+#action_pack {
+  /* background-color: red; */
+  background: rgb(237, 255, 236);
+  background: linear-gradient(152deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
+}
+
+#relax_pack {
+  background: rgb(237, 255, 236);
+  background: linear-gradient(190deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
+}
+
+#discover_pack {
+  background: rgb(237, 255, 236);
+  background: linear-gradient(63deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
+}
+
 .card img {
-  width: 26rem;
-  height: 15rem;
+
   object-fit: contain;
-  border: 1rem solid white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
@@ -99,13 +139,109 @@ nav>i {
   margin: 1rem;
 }
 
+.mySlides,
+.mySlidesAction,
+.mySlidesRelax,
+.mySlidesDiscover {
+  display: none;
+}
+
+.card img {
+  vertical-align: middle;
+  width: 95%;
+  margin: auto;
+  border-bottom: solid white 4rem;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-family: cursive;
+  font-size: 1.8rem;
+  padding: 1rem;
+  position: absolute;
+  bottom: -0.6rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-left: 2.5%;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/* .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  /* transition: background-color 0.6s ease;
+}*/
+
+
+/* .active {
+  background-color: #717171;
+} */
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .6
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .6
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px
+  }
+}
+
 /* >>> start button  */
 .button {
   position: relative;
-  background-color: #04AA6D;
+  background: rgb(237, 255, 236);
+  background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(235, 100, 36, 1) 54%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: none;
   font-size: 2rem;
-  color: #FFFFFF;
+  color: var(--color-primary);
   padding: 1rem;
   margin: 1rem;
   width: 15rem;
@@ -288,8 +424,8 @@ footer p {
 /* <<< end social media links */
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
-/* breakpoint for tablets 2 column at 500px == font size standard 16px == 31.5em */
-@media screen and (min-width: 31.5em) {
+/* breakpoint for tablets 2 column at 600px == font size standard 16px == 37.5em */
+@media screen and (min-width: 37.5em) {
   body {
     font-size: 1.8rem;
     background-color: #ff3400;
