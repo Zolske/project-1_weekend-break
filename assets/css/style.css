@@ -275,6 +275,10 @@ nav>i {
   transition: 0s
 }
 
+.nav_button {
+  width: 6rem;
+}
+
 /* <<< end button */
 /* <<< end card */
 
