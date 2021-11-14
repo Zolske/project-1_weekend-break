@@ -60,17 +60,16 @@ nav>i {
   font-size: 3rem;
 }
 
-.nav__logo {
-  width: 4rem;
-}
-
 /* <<< end nav bar */
 
-/* >>> start header */
+/* >>> start header 1st value is logo, 2nd value is background, if values not separated by "'" than they apply to both*/
 .header__page {
   background-color: #fff;
-  background-image: url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
-  background-size: auto;
+  background-image: url(/assets/images/icons/weekend-breaker_logo_icon.png), url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
+  background-position: center top 2rem, center;
+  background-size: 6rem, auto;
+  background-repeat: no-repeat;
+  /* width: 6rem; */
 }
 
 /* <<< end header */
