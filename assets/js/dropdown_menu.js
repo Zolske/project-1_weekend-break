@@ -3,16 +3,18 @@
      document.getElementById("toggel_js").classList.toggle("show");
  }
 
- // Close the dropdown if the user clicks outside of it
- //  window.onclick = function (event) {
- //      if (!event.target.matches('.button')) {
- //          var dropdowns = document.getElementsByClassName("dropdown-content");
- //          var i;
- //          for (i = 0; i < dropdowns.length; i++) {
- //              var openDropdown = dropdowns[i];
- //              if (openDropdown.classList.contains('show')) {
- //                  openDropdown.classList.remove('show');
- //              }
- //          }
- //      }
- //  }
+ //  opens the details menu
+ function detailsOpener_faq() {
+     document.getElementById("faq").setAttribute("open", "");
+     document.getElementById("toggel_js").classList.toggle("show");
+ }
+
+ function detailsOpener_about_us() {
+     document.getElementById("about_us").setAttribute("open", "");
+     document.getElementById("toggel_js").classList.toggle("show");
+ }
+
+ function detailsOpener_contact_us() {
+     document.getElementById("contact_us").setAttribute("open", "");
+     document.getElementById("toggel_js").classList.toggle("show");
+ }

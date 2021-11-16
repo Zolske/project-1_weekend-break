@@ -22,16 +22,21 @@
             <li class="dropdown">
                 <button class="button nav_button" onclick="myFunction()"><i class="fas fa-bars"></i></button>
                 <ul id="toggel_js" class="hamburger_menu">
-                    <li><a href="#home"> <button class="button"><i class="fas fa-shopping-cart"></i>
+                    <li><a href="#home"> <button class="button" onclick="myFunction()"><i
+                                    class="fas fa-shopping-cart"></i>
                                 booking</button></a></li>
-                    <li><a href="#home"> <button class="button"><i class="fas fa-info"></i> package info</button></a>
+                    <li><a href="#home"> <button class="button" onclick="myFunction()"><i class="fas fa-info"></i>
+                                package info</button></a>
                     </li>
-                    <li><a href="#faq"> <button class="button"><i class="far fa-question-circle"></i> faq</button></a>
+                    <li><a href="#faq"> <button class="button" onclick="detailsOpener_faq()"><i
+                                    class="far fa-question-circle"></i> faq</button></a>
                     </li>
-                    <li><a href="#about_us"> <button class="button"><i class="fas fa-user-tie"></i> about
+                    <li><a href="#about_us"> <button class="button" onclick="detailsOpener_about_us()"><i
+                                    class="fas fa-user-tie"></i> about
                                 us</button></a>
                     </li>
-                    <li><a href="#contact_us"> <button class="button"><i class="fas fa-address-book"></i> contact
+                    <li><a href="#contact_us"> <button class="button" onclick="detailsOpener_contact_us()"><i
+                                    class="fas fa-address-book"></i> contact
                                 us</button></a>
                     </li>
                 </ul>
@@ -545,9 +550,9 @@
             </div>
         </article>
         <article class="element faq">
-            <details>
+            <details id="faq">
                 <summary>
-                    <h2 id="faq"><i class="far fa-question-circle"></i> faq</h2>
+                    <h2><i class="far fa-question-circle"></i> faq</h2>
                 </summary>
                 <details>
                     <summary>
@@ -578,9 +583,9 @@
             </details>
         </article>
         <article class="element about_us">
-            <details>
+            <details id="about_us">
                 <summary>
-                    <h2 id="about_us"><i class="fas fa-user-tie"></i> about us</h2>
+                    <h2><i class="fas fa-user-tie"></i> about us</h2>
                 </summary>
                 <h3>about me :</h3>
                 <img class="profile_me" src="assets/images/profile_me/profile_me_1.webp" alt="">
@@ -606,9 +611,9 @@
         </article>
         <!-- contact us -->
         <section class="element">
-            <details>
+            <details id="contact_us">
                 <summary>
-                    <h2 id="contact_us"><i class="fas fa-address-book"></i> contact us</h2>
+                    <h2><i class="fas fa-address-book"></i> contact us</h2>
                 </summary>
                 <h3>Find and contact us:</h3>
                 <ul class="contact">
