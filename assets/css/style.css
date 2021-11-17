@@ -306,6 +306,10 @@ nav li:nth-child(2) {
   background: var(--color-button-selected);
 }
 
+footer i:hover {
+  color: var(--color-button-selected);
+}
+
 .dropdown {
   position: relative;
   /* display: inline-block; */
