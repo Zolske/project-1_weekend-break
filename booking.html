@@ -46,10 +46,59 @@
     </nav>
     <header class="header__page">
         <h1>Book your weekend package.</h1>
+        <br>
     </header>
     <main>
         <article class="element">
-
+            <form action="#" method="post">
+                <fieldset class="grid">
+                    <legend>personal info</legend>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder=" your first name" size="12" required>
+                    <hr>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder=" your last name" size="12" required>
+                    <hr>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder=" your email" size="12" required>
+                    <hr>
+                    <label for="subscribe_tick">Subscribe to news letter</label>
+                    <input type="radio" id="subscribe_tick" name="subscribe">
+                </fieldset>
+                <fieldset>
+                    <legend>your package</legend>
+                    <label for="weekend_pack">Weekend Package</label>
+                    <select name="weekend_pack" id="weekend_pack" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <optgroup label="Action Package">
+                            <option value="action_parachute">parachute in Dublin</option>
+                        </optgroup>
+                        <optgroup label="Relax Package">
+                            <option value="relax_spa">spa in Dublin</option>
+                        </optgroup>
+                        <optgroup label="Discovery Package">
+                            <option value="discover_dublin">discover Dublin</option>
+                        </optgroup>
+                    </select>
+                    <hr>
+                    <label for="guests">Guests (max 7)</label>
+                    <input type="number" id="guests" name="guests" min="0" max="7" value="0">
+                    <hr>
+                    <label for="date">Select Week * </label>
+                    <input type="week" id="date" name="date">
+                    <p class="note">* The week in which the weekend falls
+                        with the package (Saturday to Sunday).</p>
+                </fieldset>
+                <hr>
+                <label for="comment">Comment<br>&nbsp;</label>
+                <textarea id="comment" name="comment" row="4" cols="24"
+                    placeholder=" your comments or requests"></textarea>
+                <hr>
+                <label for="terms">Accept terms and conditions</label>
+                <input type="radio" id="terms" name="terms" required>
+                <hr>
+                <button type="submit" class="button">submit</button>
+            </form>
         </article>
     </main>
     <footer>
