@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add bootstrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- sets different browser styles to basic -->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- link to stylesheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Weekend Breaker</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><button class="button nav_button"><i class="fas fa-home"></i></button></a></li>
+            <li class="dropdown">
+                <button class="button nav_button" onclick="myFunction()"><i class="fas fa-bars"></i></button>
+                <ul id="toggel_js" class="hamburger_menu">
+                    <li><a href="#home"> <button class="button" onclick="myFunction()"><i
+                                    class="fas fa-shopping-cart"></i>
+                                booking</button></a></li>
+                    <li><a href="booking.html"> <button class="button" onclick="myFunction()"><i
+                                    class="fas fa-info"></i>
+                                package info</button></a>
+                    </li>
+                    <li><a href="#faq"> <button class="button" onclick="detailsOpener_faq()"><i
+                                    class="far fa-question-circle"></i> faq</button></a>
+                    </li>
+                    <li><a href="#about_us"> <button class="button" onclick="detailsOpener_about_us()"><i
+                                    class="fas fa-user-tie"></i> about
+                                us</button></a>
+                    </li>
+                    <li><a href="#contact_us"> <button class="button" onclick="detailsOpener_contact_us()"><i
+                                    class="fas fa-address-book"></i> contact
+                                us</button></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <header class="header__page">
+        <h1>Book your weekend package.</h1>
+    </header>
+    <main>
+        <article class="element">
+
+        </article>
+    </main>
+    <footer>
+        <section class="socialmedia">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </section>
+        <section class="copy">
+            <p>"Weekend Breaker"&reg; is a Registered Tradmark @ Zoltán Kepes<br>&copy; All rights reserved</p>
+        </section>
+    </footer>
+    <!-- connection to "Font Awesome" -->
+    <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>
+    <!-- JavaScript for dropdown menu -->
+    <script src="assets/js/dropdown_menu.js"></script>
+</body>
+
+</html>

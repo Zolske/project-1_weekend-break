@@ -478,7 +478,6 @@ footer p {
 @media screen and (min-width: 37.5em) {
   body {
     font-size: 1.8rem;
-    background-color: #ff3400;
   }
 
   h1 {
@@ -500,7 +499,6 @@ footer p {
 @media screen and (min-width: 63.75em) {
   body {
     font-size: 1.8rem;
-    background-color: yellow;
   }
 
   h1 {
