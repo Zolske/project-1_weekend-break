@@ -26,5 +26,8 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
       "webp"
-   ]
+   ],
+   "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   }
 }
