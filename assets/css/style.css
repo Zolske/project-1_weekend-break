@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #edffec;
-  --color-secondary: #7c6a0a;
-  --color-accent: #fa9500;
-  --color-headings: #eb6424;
+  --color-primary: #EDFFEC;
+  --color-secondary: #7C6A0A;
+  --color-accent: #FA9500;
+  --color-headings: #EB6424;
   --color-body: #918ca4;
   --color-button-text: #fff;
-  --color-button-selected: #2980b9;
+  --color-button-selected: #2980B9;
 }
 
 html {
@@ -34,7 +34,7 @@ h1 {
   padding-top: 6.5rem;
 }
 
-h1 + p {
+h1+p {
   color: black;
   font-weight: bolder;
 }
@@ -98,6 +98,7 @@ nav ul {
 nav li:nth-child(1) {
   float: left;
   list-style: none;
+
 }
 
 nav li:nth-child(2) {
@@ -110,8 +111,7 @@ nav li:nth-child(2) {
 /* >>> start header 1st value is logo, 2nd value is background, if values not separated by "'" than they apply to both*/
 .header__page {
   background-color: #fff;
-  background-image: url(/assets/images/icons/weekend-breaker_logo_icon.png),
-    url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
+  background-image: url(/assets/images/icons/weekend-breaker_logo_icon.png), url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
   background-position: center top 2rem, center;
   background-size: 6rem, cover;
   background-repeat: no-repeat;
@@ -134,12 +134,7 @@ nav li:nth-child(2) {
 /* >>> start card  */
 .tablink {
   background: rgb(237, 255, 236);
-  background: radial-gradient(
-    circle,
-    rgba(237, 255, 236, 1) 0%,
-    rgba(250, 149, 0, 1) 0%,
-    rgba(235, 100, 36, 1) 54%
-  );
+  background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(235, 100, 36, 1) 54%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   color: var(--color-button-text);
   /* float: left; */
@@ -167,37 +162,24 @@ nav li:nth-child(2) {
 #action_pack {
   /* background-color: red; */
   background: rgb(237, 255, 236);
-  background: linear-gradient(
-    152deg,
-    rgba(237, 255, 236, 1) 0%,
-    rgba(250, 149, 0, 1) 89%,
-    rgba(235, 100, 36, 1) 100%
-  );
+  background: linear-gradient(152deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
 }
 
 #relax_pack {
   background: rgb(237, 255, 236);
-  background: linear-gradient(
-    190deg,
-    rgba(237, 255, 236, 1) 0%,
-    rgba(250, 149, 0, 1) 89%,
-    rgba(235, 100, 36, 1) 100%
-  );
+  background: linear-gradient(190deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
 }
 
 #discover_pack {
   background: rgb(237, 255, 236);
-  background: linear-gradient(
-    63deg,
-    rgba(237, 255, 236, 1) 0%,
-    rgba(250, 149, 0, 1) 89%,
-    rgba(235, 100, 36, 1) 100%
-  );
+  background: linear-gradient(63deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
 }
 
 .card img {
+
   object-fit: contain;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 .card p {
@@ -257,6 +239,7 @@ nav li:nth-child(2) {
   /* transition: background-color 0.6s ease;
 }*/
 
+
 /* .active {
   background-color: #717171;
 } */
@@ -271,28 +254,28 @@ nav li:nth-child(2) {
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0.6;
+    opacity: .6
   }
 
   to {
-    opacity: 1;
+    opacity: 1
   }
 }
 
 @keyframes fade {
   from {
-    opacity: 0.6;
+    opacity: .6
   }
 
   to {
-    opacity: 1;
+    opacity: 1
   }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {
-    font-size: 11px;
+    font-size: 11px
   }
 }
 
@@ -300,12 +283,7 @@ nav li:nth-child(2) {
 .button {
   position: relative;
   background: rgb(237, 255, 236);
-  background: radial-gradient(
-    circle,
-    rgba(237, 255, 236, 1) 0%,
-    rgba(250, 149, 0, 1) 0%,
-    rgba(235, 100, 36, 1) 54%
-  );
+  background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(235, 100, 36, 1) 54%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: none;
   font-size: 2rem;
@@ -386,8 +364,7 @@ summary h3 {
   color: orange;
 }
 
-.user {
-}
+.user {}
 
 .user header {
   display: flex;
@@ -408,7 +385,7 @@ summary h3 {
   font-size: 1.8rem;
 }
 
-.user figcaption + p {
+.user figcaption+p {
   font-size: 1rem;
   margin-bottom: 0;
 }
@@ -460,13 +437,13 @@ summary h3 {
 /* <<< end about us */
 
 /* >>> start contact us */
-.contact > li {
+.contact>li {
   font-weight: bolder;
   font-size: 2.2rem;
   list-style-type: none;
 }
 
-.contact > li > ul > li {
+.contact>li>ul>li {
   font-style: italic;
   font-weight: normal;
   font-size: 1.4rem;
@@ -482,22 +459,7 @@ summary h3 {
 }
 
 /* <<< end map for contacts */
-/* <<< end contact us */
-
-/* >>> start table */
-table {
-  border: solid black 1px;
-  border-collapse: collapse;
-}
-
-tr,
-th,
-td {
-  border: solid black 1px;
-  border-collapse: collapse;
-  padding: 1rem;
-}
-/* <<< end table */
+/* >>> end contact us */
 
 /* >>> start social media */
 .socialmedia {
@@ -516,6 +478,7 @@ td {
 .copy {
   font-size: 1rem;
 }
+
 /* <<< end copy right */
 
 /* >>> start footer */
@@ -573,32 +536,4 @@ footer p {
   h3 {
     font-size: 2.4rem;
   }
-
-  /* .no_click {
-    pointer-events: none;
-  }
-
-  .card {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-   .tabcontent {
-    display: inline;
-  }
-
-   #action_pack {
-    width: 28%;
-    display: inline;
-  }
-
-  #relax_pack {
-    display: inline;
-    width: 28%;
-  }
-
-  #discover_pack {
-    display: inline;
-    width: 28%;
-  } */
 }
