@@ -1,5 +1,3 @@
-/* B__E--M */
-
 :root {
   --color-primary: #EDFFEC;
   --color-secondary: #7C6A0A;
@@ -63,11 +61,6 @@ p {
 .note {
   font-style: italic;
   margin-top: 0;
-}
-
-.flex {
-  display: flexbox;
-  justify-content: space-between;
 }
 
 legend {
@@ -163,7 +156,7 @@ nav li:nth-child(2) {
 /* Style the tab content */
 .tabcontent {
   color: var(--color-primary);
-  /* display: none; */
+  display: none;
 }
 
 #action_pack {
@@ -371,7 +364,7 @@ summary h3 {
   color: orange;
 }
 
-/* .user {} */
+.user {}
 
 .user header {
   display: flex;
@@ -521,26 +514,6 @@ footer p {
 
   h3 {
     font-size: 2.4rem;
-  }
-
-  /* turn off buttons for switching between tabs */
-  .tablink {
-    pointer-events: none;
-  }
-
-  #action_pack {
-    width: 30%;
-    display: inline-block;
-  }
-
-  #relax_pack {
-    width: 30%;
-    display: inline-block;
-  }
-
-  #discover_pack {
-    width: 30%;
-    display: inline-block;
   }
 }
 
