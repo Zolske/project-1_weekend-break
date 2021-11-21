@@ -1,5 +1,3 @@
-/* B__E--M */
-
 /* color palette */
 :root {
   --color-primary: #EDFFEC;
@@ -56,15 +54,57 @@ h3 {
 
 p {
   margin: 2rem;
+  padding: 1rem;
   color: var(--color-text);
 }
 
 /* >>> start nav bar */
-nav {
+/* makes navbar element stick and positions it */
+.nav--bar {
   position: -webkit-sticky;
   position: sticky;
   top: 1px;
   z-index: 10;
+}
+
+.nav--bar ul {
+  list-style: none;
+}
+
+.hamburger_menu {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+}
+
+.hamburger_menu a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.right {
+  float: right;
+  margin-right: 1rem;
+}
+
+.left {
+  float: left;
+  margin-left: 1rem;
+}
+
+.hide_button {
+  display: none;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
 
 nav ul {
@@ -72,7 +112,7 @@ nav ul {
   margin-top: 0;
 }
 
-nav li:nth-child(1) {
+/* nav li:nth-child(1) {
   float: left;
   list-style: none;
 
@@ -81,11 +121,11 @@ nav li:nth-child(1) {
 nav li:nth-child(2) {
   float: right;
   list-style: none;
-}
+} */
 
 /* <<< end nav bar */
 
-/* >>> start header 1st value is logo, 2nd value is background, if values not separated by "'" than they apply to both*/
+/* header 1st value is logo, 2nd value is background, if values not separated by "'" than they apply to both*/
 .header-page {
   background-color: #fff;
   background-image: url(/assets/images/icons/weekend-breaker_logo_icon.png), url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
@@ -94,9 +134,7 @@ nav li:nth-child(2) {
   background-repeat: no-repeat;
 }
 
-/* <<< end header */
-
-/* >>> start section class element */
+/* section class element */
 .section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 90%;
@@ -106,8 +144,7 @@ nav li:nth-child(2) {
   text-align: center;
 }
 
-/* <<< end section class element */
-
+/* >>> start product card */
 #action_pack {
   background: rgb(237, 255, 236);
   background: linear-gradient(152deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
@@ -138,9 +175,7 @@ nav li:nth-child(2) {
 
 /* Slideshow container */
 .slideshow-container {
-  /* max-width: 1000px; */
   position: relative;
-  /* margin: auto; */
 }
 
 /* Number text (1/3 etc) */
@@ -153,13 +188,16 @@ nav li:nth-child(2) {
   top: 0;
 }
 
+/* removes slides which will be displayed later (10seconds) through JavaScript 'shopping_gallery' */
 .mySlidesAction,
 .mySlidesRelax,
 .mySlidesDiscover {
   display: none;
 }
 
-/* Fading animation */
+/* <<< end card */
+
+/* >>> start Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 10s;
@@ -187,7 +225,9 @@ nav li:nth-child(2) {
   }
 }
 
-/* >>> start button  */
+/* <<< end  Fading animation */
+
+/* >>> start button and menu*/
 .button {
   position: relative;
   background: rgb(237, 255, 236);
@@ -197,16 +237,22 @@ nav li:nth-child(2) {
   font-size: 2rem;
   color: var(--color-primary);
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0;
   width: 15rem;
   text-align: center;
   border-radius: 20px;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+}
+
+/* small button size for mobile first */
+.button--mobile {
+  width: 6rem;
+}
+
+.button--show-desktop {
+  display: none;
 }
 
 .button:hover,
@@ -218,46 +264,7 @@ footer i:hover {
   color: var(--color-button-selected);
 }
 
-.dropdown {
-  position: relative;
-  /* display: inline-block; */
-}
-
-.hamburger_menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  /* background-color: #f1f1f1; */
-  /* min-width: 160px; */
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  list-style: none;
-}
-
-.hamburger_menu a {
-  color: black;
-  /* padding: 12px 16px; */
-  text-decoration: none;
-  display: block;
-}
-
-/* .dropdown a:hover {
-  background-color: #ddd;
-} */
-
-.show {
-  /* display: block; */
-  display: flex;
-  flex-direction: column;
-}
-
-.nav_button {
-  width: 6rem;
-}
-
-/* <<< end button */
-/* <<< end card */
+/* <<< end button and menu */
 
 /* >>> start display inline block for summary heading */
 summary h2,
@@ -271,8 +278,6 @@ summary h3 {
 .checked {
   color: orange;
 }
-
-/* .user {} */
 
 .user header {
   display: flex;
@@ -307,12 +312,10 @@ summary h3 {
 
 /* <<< end user rating testimonies */
 
-/* >>> start faq */
+/* start faq */
 .faq p {
   font-style: italic;
 }
-
-/* <<< end faq */
 
 /* >>> start about us */
 .profile_me {
@@ -358,15 +361,13 @@ summary h3 {
   list-style-type: none;
 }
 
-/* >>> start map for contact us  */
+/* map for contact us  */
 #map {
   height: 20rem;
-  /* The height is 400 pixels */
   width: 90%;
   margin: auto;
 }
 
-/* <<< end map for contacts */
 /* >>> end contact us */
 
 /* >>> start social media */
@@ -382,12 +383,10 @@ summary h3 {
 
 /* <<< end social media links */
 
-/* >>> start copy right */
+/* copy right */
 .copy {
   font-size: 1rem;
 }
-
-/* <<< end copy right */
 
 /* >>> start footer */
 footer {
@@ -424,47 +423,74 @@ footer p {
     font-size: 2.4rem;
   }
 
+  .hide-desktop {
+    display: none;
+  }
+
+  .button--show-desktop {
+    display: inline-block;
+  }
+
+  .hamburger_menu {
+    display: inline-block;
+    float: left;
+    position: static;
+    top: 5rem;
+
+    overflow: auto;
+    z-index: 1;
+    list-style: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+
+  .hamburger_menu li {
+    display: inline-block;
+
+  }
+
+  .hamburger_menu .button {
+    width: auto;
+    font-size: 1.3rem;
+    margin: auto;
+  }
+
+  /* spaces cards horizontal even */
   .product-card {
     display: flex;
     justify-content: space-evenly;
   }
 
+  /* spaces card elements vertical even */
   #action_pack {
     width: 30%;
+    min-width: 16.2rem;
     display: inline-block;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
+  /* spaces card elements vertical even */
   #relax_pack {
     width: 30%;
+    min-width: 16.2rem;
     display: inline-block;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
+  /* spaces card elements vertical even */
   #discover_pack {
     width: 30%;
+    min-width: 16.2rem;
     display: inline-block;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-
-  .product-card__heading {
-    align-self: flex-start;
-  }
-
-  .slideshow-container {
-    align-self: flex-start;
-    /* height: 300px; */
-  }
-
-  .product-card-button {
-    /* align-self: flex-end; */
-
   }
 }
 

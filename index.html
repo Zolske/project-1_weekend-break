@@ -18,32 +18,40 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav--bar">
         <ul>
-            <li><a href="index.html"><button class="button nav_button"><i class="fas fa-home"></i></button></a></li>
-            <li class="dropdown">
-                <button class="button nav_button" onclick="myFunction()"><i class="fas fa-bars"></i></button>
-                <ul id="toggel_js" class="hamburger_menu">
-                    <li><a href="booking.html"> <button class="button" onclick="myFunction()"><i
-                                    class="fas fa-shopping-cart"></i>
-                                booking</button></a></li>
-                    <li><a href="index.html#home"> <button class="button" onclick="myFunction()"><i
-                                    class="fas fa-info"></i>
-                                package info</button></a>
-                    </li>
-                    <li><a href="index.html#faq"> <button class="button" onclick="detailsOpener_faq()"><i
-                                    class="far fa-question-circle"></i> faq</button></a>
-                    </li>
-                    <li><a href="index.html#about_us"> <button class="button" onclick="detailsOpener_about_us()"><i
-                                    class="fas fa-user-tie"></i> about
-                                us</button></a>
-                    </li>
-                    <li><a href="index.html#contact_us"> <button class="button" onclick="detailsOpener_contact_us()"><i
-                                    class="fas fa-address-book"></i> contact
-                                us</button></a>
-                    </li>
-                </ul>
+            <!-- button which links to home page -->
+            <li><a href="index.html"><button class="button button--mobile hide-desktop left"><i
+                            class="fas fa-home"></i></button></a></li>
+            <li>
+                <!-- myFunction(), JavaScript => dropdown_menu, toggles between showing sub nav elements -->
+                <button class="button button--mobile hide-desktop right" onclick="myFunction()"><i
+                        class="fas fa-bars"></i></button>
             </li>
+            <div id="toggel_js" class="hamburger_menu">
+                <li class="left"><a href="index.html"><button class="button button--show-desktop"><i
+                                class="fas fa-home"></i>
+                            home</button></a></li>
+                <li class="left"><a href="booking.html"> <button class="button"><i class="fas fa-shopping-cart"></i>
+                            book</button></a></li>
+                <li class="left"><a href="index.html#home"> <button class="button"><i class="fas fa-info"></i>
+                            package</button></a>
+                </li>
+                <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="right"><a href="index.html#faq"> <button class="button" onclick="detailsOpener_faq()"><i
+                                class="far fa-question-circle"></i> faq</button></a>
+                </li>
+                <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="right"><a href="index.html#about_us"> <button class="button"
+                            onclick="detailsOpener_about_us()"><i class="fas fa-user-tie"></i> about us</button></a>
+                </li>
+                <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="right"><a href="index.html#contact_us"> <button class="button"
+                            onclick="detailsOpener_contact_us()"><i class="fas fa-address-book"></i>
+                            contact</button></a>
+                </li>
+            </div>
+
         </ul>
     </nav>
     <header class="header-page">
