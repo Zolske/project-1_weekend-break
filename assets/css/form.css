@@ -1,0 +1,20 @@
+.note {
+    font-style: italic;
+    color: red;
+    margin-top: 0;
+}
+
+legend {
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px lightgrey, 0 0 5px grey;
+}
+
+input,
+select,
+textarea {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: lightgray 1px solid;
+    border-radius: 20px;
+}
