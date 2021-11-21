@@ -436,14 +436,13 @@ footer p {
     float: left;
     position: static;
     top: 5rem;
-
     overflow: auto;
     z-index: 1;
     list-style: none;
     box-shadow: none;
     background-color: transparent;
     width: 100%;
-    margin: 1rem 0rem;
+    margin: 1rem 0;
   }
 
   .hamburger_menu li {
@@ -491,6 +490,17 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+/* media queries do not take font size from the html element,
+16px == 1em and not 62.5% == 10px == 1em */
+/* breakpoint for desktop 3 column at 720px == font size standard 16px == 45em */
+@media screen and (min-width: 45em) {
+
+  .hamburger_menu {
+    width: 90%;
+    margin-left: 5%;
   }
 }
 
