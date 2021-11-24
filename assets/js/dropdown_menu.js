@@ -1,6 +1,6 @@
  /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
- function myFunction() {
-     document.getElementById("toggel_js").classList.toggle("show");
+ function showHamburger() {
+     document.getElementsByClassName("hamburger_menu")[0].classList.toggle("show");
  }
 
  //  opens the details menu

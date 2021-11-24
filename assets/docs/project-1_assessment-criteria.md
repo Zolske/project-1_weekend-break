@@ -33,7 +33,7 @@ Test a Front-End web application through the development, implementation and dep
 2.4|[ ]|Incorporate images that are of sufficient resolution to not appear pixelated or stretched
 2.5|[ ]|Code all external links to open in a separate tab when clicked
 2.6|[ ]|Use CSS media queries across the application to ensure the layout changes appropriately and maintains the page's structural integrity across device screen sizes.
-2.7|[ ]|Use Semantic markup to structure HTML code
+2.7|[ ]|Use Semantic mark-up to structure HTML code
 2.8|[ ]|Present the finished website with clearly understandable site-specific content, rather than Lorem Ipsum placeholder text
 2.9|[ ]|Implement clear navigation to allow users to find resources on the site intuitively.
 
@@ -90,7 +90,7 @@ The design of the web application demonstrates the main principles of good UX de
 
 Information Hierarchy
 
-* Semantic markup is used to convey structure - all information displayed on the site is presented in an organised fashion, with each piece of information being easy to find
+* Semantic mark-up is used to convey structure - all information displayed on the site is presented in an organised fashion, with each piece of information being easy to find
 * all resources on the site are easy to find, allowing users to navigate the layout of the site intuitively
 * information is presented and categorised in terms of its priority
 
@@ -98,7 +98,7 @@ Information Hierarchy
 User Control
 
 * All interaction with the site would be likely to produce a positive emotional response within the user. This is down to the flow of information layout, use of colour, clear and unambiguous navigation structures and all interaction feedback
-* when displaying media files, the site avoids autoplay of audio; instead, let the user initiate and control such actions
+* when displaying media files, the site avoids auto play of audio; instead, let the user initiate and control such actions
 
 
 Consistency
@@ -142,7 +142,7 @@ Readability
 * code is indented in a consistent manner to ease readability, and there are no unnecessary repeated blank lines (and never more than 2)
 * id/class/attribute names clearly indicate their purpose
 * CSS code is split into well-defined and commented sections
-* Semantic markup is used to structure HTML code
+* Semantic mark-up is used to structure HTML code
 * HTML and CSS are kept in separate, linked files
 * CSS files are linked to in the HTML file’s head element
 

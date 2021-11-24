@@ -65,12 +65,17 @@ p {
   position: sticky;
   top: 1px;
   z-index: 10;
+  width: 90%;
+  margin-left: 5%;
 }
 
+/* remove bullets from list elements in nav bar */
 .nav--bar ul {
   list-style: none;
 }
 
+/* removes the "hamburger" menu", click event showHamburger triggers JavaScript "dropdown_menu"
+to show menu, its position is define in this css rule-set */
 .hamburger_menu {
   display: none;
   position: absolute;
@@ -79,49 +84,28 @@ p {
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  list-style: none;
+  padding: 1rem;
 }
 
-.hamburger_menu a {
-  color: black;
-  text-decoration: none;
-  display: block;
-}
-
-.right {
-  float: right;
-  margin-right: 1rem;
-}
-
-.left {
-  float: left;
-  margin-left: 1rem;
-}
-
-.hide_button {
-  display: none;
-}
-
+/* JavaScript => dropdown_menu, toggles between hiding and showing the "hamburger" menu,
+rules which are defined hire will be applied to the hamburger_menu rule set when
+click event showHamburger is triggered */
 .show {
   display: flex;
   flex-direction: column;
 }
 
-nav ul {
-  padding: 0rem 2rem;
-  margin-top: 0;
-}
-
-/* nav li:nth-child(1) {
+/* home button to flow left on mobile first, background image can show behind,
+button is removed on wider view (.hide-desktop)*/
+.float-left--mobile-first {
   float: left;
-  list-style: none;
-
 }
 
-nav li:nth-child(2) {
+/* float right, background image can show behind */
+.float-right {
   float: right;
-  list-style: none;
-} */
+  margin-right: 1rem;
+}
 
 /* <<< end nav bar */
 
@@ -456,6 +440,11 @@ footer p {
     margin: auto;
   }
 
+  .float-left {
+    float: left;
+    margin-left: 1rem;
+  }
+
   /* spaces cards horizontal even */
   .product-card {
     display: flex;
@@ -501,6 +490,10 @@ footer p {
   .hamburger_menu {
     width: 90%;
     margin-left: 5%;
+  }
+
+  .hamburger_menu .button {
+    font-size: 1.6rem;
   }
 }
 
