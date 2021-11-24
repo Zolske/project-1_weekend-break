@@ -60,20 +60,23 @@
     </nav>
     <header class="header-page">
         <h1>The Weekend Breaker</h1>
-        <p>Welcome to the "weekend breaker". We offer weekend trip packages in three flavours ...<br>action, relax and
+        <p id="intro-text">Welcome to the "weekend breaker". We offer weekend trip packages in three flavours
+            ...<br>action, relax and
             discovery.<br> Every moth the packages change, you can keep up to date by subscripting to the newsletter.
         </p>
+        <br>
     </header>
     <main>
         <!-- >>> start  card-->
         <article class="section">
-            <h2>our monthly weekend packages :</h2>
+            <h2>our monthly weekend packages&nbsp;:</h2>
+            <br>
             <section class="product-card">
                 <div id="action_pack">
                     <!-- there is no "top" class in css, its purpose is to group the heading & the image together
                         so that flex dose not put space in between -->
                     <div class="top">
-                        <h2><i class="fas fa-snowboarding"></i> action pack</h2>
+                        <h2 class="product-card__heading"><i class="fas fa-snowboarding"></i> action pack</h2>
                         <!-- mySlidesAction is used in JavaScript "shopping_gallery" sets all to, display: hide;,
                             changes every 10s one class to, display: block;-->
                         <!-- fade is used in css to show a fading animation  -->
@@ -189,7 +192,7 @@
                 <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
                 <div id="relax_pack">
                     <div class="top">
-                        <h2><i class="fas fa-umbrella-beach"></i> relax pack</h2>
+                        <h2 class="product-card__heading"><i class="fas fa-umbrella-beach"></i> relax pack</h2>
 
                         <div class="mySlidesRelax fade">
                             <div class="numbertext text-color-change">1 / 5</div>
@@ -294,7 +297,7 @@
                 <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
                 <div id="discover_pack">
                     <div class="top">
-                        <h2><i class="fas fa-binoculars"></i> discover pack</h2>
+                        <h2 class="product-card__heading"><i class="fas fa-binoculars"></i> discover pack</h2>
 
                         <div class="mySlidesDiscover fade">
                             <div class="numbertext text-color-change">1 / 5</div>
@@ -401,6 +404,7 @@
         <!-- <<< end  -->
         <!-- >>> start testimony -->
         <article class="section">
+            <h2>What our customers say&nbsp;:</h2>
             <!-- bootstrap carousel -->
             <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <!-- defines the carousel with 5 slides, more could be added -->
