@@ -70,205 +70,215 @@
             <h2>our monthly weekend packages :</h2>
             <section class="product-card">
                 <div id="action_pack">
+                    <!-- there is no "top" class in css, its purpose is to group the heading & the image together
+                        so that flex dose not put space in between -->
                     <div class="top">
-                        <h2 class="product-card__heading"><i class="fas fa-snowboarding"></i> action pack</h2>
-                        <div class="slideshow-container">
-                            <div class="mySlidesAction fade">
-                                <div class="numbertext">1 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-action_pack_01-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-action_pack_01-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-action_pack_01-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-action_pack_01-kamil_pietrzak-unsplash.jpg"
-                                        alt="three people parachuting, a blue skye in the background">
-                                    <div class="product-card__img-text">jump with your friends</div>
-                                </picture>
-                            </div>
+                        <h2><i class="fas fa-snowboarding"></i> action pack</h2>
+                        <!-- mySlidesAction is used in JavaScript "shopping_gallery" sets all to, display: hide;,
+                            changes every 10s one class to, display: block;-->
+                        <!-- fade is used in css to show a fading animation  -->
+                        <div class="mySlidesAction fade">
+                            <!-- displays the "text" / number in the top corner of the image -->
+                            <div class="numbertext">1 / 5</div>
+                            <!-- depending on the width of the screen, the appropriated image is chosen, starting from the top down to the bottom,
+                            saves unnecessary download for mobile devices because only the 2nd last image is downloaded for mobile devices -->
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-action_pack_01-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-action_pack_01-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-action_pack_01-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <!-- fallback image in case the browser dose not support the image type, also contains the
+                                image description in for screen readers or if none of the images can be loaded -->
+                                <img src="assets/images/small/small-action_pack_01-kamil_pietrzak-unsplash.jpg"
+                                    alt="three people parachuting, a blue skye in the background">
+                                <!-- shown under the image, dose not describe the image, that is why figcaption is not used but adds a slogan to it -->
+                                <div class="product-card__img-text">jump with your friends</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesAction fade">
-                                <div class="numbertext">2 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-action_pack_02-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-action_pack_02-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-action_pack_02-kamil_pietrzak-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-action_pack_02-kamil_pietrzak-unsplash.jpg"
-                                        alt="a man jumping out of an airplane in his parachute">
-                                    <div class="product-card__img-text">fly like superman</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesAction fade">
+                            <div class="numbertext">2 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-action_pack_02-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-action_pack_02-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-action_pack_02-kamil_pietrzak-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-action_pack_02-kamil_pietrzak-unsplash.jpg"
+                                    alt="a man jumping out of an airplane in his parachute">
+                                <div class="product-card__img-text">fly like superman</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesAction fade">
-                                <div class="numbertext">3 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-action_pack_03-mario_majer-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-action_pack_03-mario_majer-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-action_pack_03-mario_majer-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-action_pack_03-mario_majer-unsplash.jpg"
-                                        alt="a skydiver diving through the sunset sky">
-                                    <div class="product-card__img-text">enjoy the peace</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesAction fade">
+                            <div class="numbertext">3 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-action_pack_03-mario_majer-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-action_pack_03-mario_majer-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-action_pack_03-mario_majer-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-action_pack_03-mario_majer-unsplash.jpg"
+                                    alt="a skydiver diving through the sunset sky">
+                                <div class="product-card__img-text">enjoy the peace</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesAction fade">
-                                <div class="numbertext">4 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-action_pack_04-vlad-hilitanu-lIm-unsplash.jpg"
-                                        alt="two people parachuting together">
-                                    <div class="product-card__img-text">experience it together</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesAction fade">
+                            <div class="numbertext">4 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-action_pack_04-vlad-hilitanu-lIm-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-action_pack_04-vlad-hilitanu-lIm-unsplash.jpg"
+                                    alt="two people parachuting together">
+                                <div class="product-card__img-text">experience it together</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesAction fade">
-                                <div class="numbertext">5 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-action_pack_05-mohammad-asadi-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-action_pack_05-mohammad-asadi-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-action_pack_05-mohammad-asadi-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_05-george_bakos-unsplash.jpg"
-                                        alt="a skydiver navigating through the sunset sky">
-                                    <div class="product-card__img-text">you are in command</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesAction fade">
+                            <div class="numbertext">5 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-action_pack_05-mohammad-asadi-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-action_pack_05-mohammad-asadi-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-action_pack_05-mohammad-asadi-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_05-george_bakos-unsplash.jpg"
+                                    alt="a skydiver navigating through the sunset sky">
+                                <div class="product-card__img-text">you are in command</div>
+                            </picture>
                         </div>
                     </div>
+                    <!-- description text to the package -->
                     <p>This months action weekend break takes you parachuting to dublin. The pack is made up of the
-                        training
-                        day, where a former sargent of the army will get you ready for the next days big jump. </p>
+                        training day, where a former sargent of the army will get you ready for the next days big jump.
+                    </p>
+                    <!-- grouped together in an class so flex treats them as one unit not individually -->
                     <section class="product-card-button">
                         <a href="booking.html"><button class="button"><i class="fas fa-shopping-cart"></i>
                                 booking</button></a>
-                        <button class="button"><i class="fas fa-info"></i> package info</button>
-                        <button class="button"><i class="fas fa-file-download"></i> flyer</button>
+                        <a href="#"><button class="button"><i class="fas fa-info"></i> package info</button></a>
+                        <a href="#"><button class="button"><i class="fas fa-file-download"></i> flyer</button></a>
                     </section>
                 </div>
 
+                <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
                 <div id="relax_pack">
                     <div class="top">
-                        <h2 class="product-card__heading"><i class="fas fa-umbrella-beach"></i> relax pack</h2>
-                        <div class="slideshow-container">
+                        <h2><i class="fas fa-umbrella-beach"></i> relax pack</h2>
 
-                            <div class="mySlidesRelax fade">
-                                <div class="numbertext">1 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-relax_pack_01-noah-buscher-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-relax_pack_01-noah-buscher-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-relax_pack_01-noah-buscher-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-relax_pack_01-noah-buscher-unsplash.jpg"
-                                        alt="women covered with water and sliced fruites">
-                                    <div class="product-card__img-text">refresh your senses</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesRelax fade">
+                            <div class="numbertext">1 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-relax_pack_01-noah-buscher-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-relax_pack_01-noah-buscher-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-relax_pack_01-noah-buscher-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-relax_pack_01-noah-buscher-unsplash.jpg"
+                                    alt="women covered with water and sliced fruites">
+                                <div class="product-card__img-text">refresh your senses</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesRelax fade">
-                                <div class="numbertext">2 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-relax_pack_02-raphael-lovaski-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-relax_pack_02-raphael-lovaski-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-relax_pack_02-raphael-lovaski-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-relax_pack_02-raphael-lovaski-unsplash.jpg"
-                                        alt="women is getting massaged with a rollin pin">
-                                    <div class="product-card__img-text">get rolled over</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesRelax fade">
+                            <div class="numbertext">2 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-relax_pack_02-raphael-lovaski-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-relax_pack_02-raphael-lovaski-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-relax_pack_02-raphael-lovaski-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-relax_pack_02-raphael-lovaski-unsplash.jpg"
+                                    alt="women is getting massaged with a rollin pin">
+                                <div class="product-card__img-text">get rolled over</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesRelax fade">
-                                <div class="numbertext">3 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-relax_pack_03-brooke_lark-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-relax_pack_03-brooke_lark-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-relax_pack_03-brooke_lark-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-relax_pack_03-brooke_lark-unsplash.jpg"
-                                        alt="on a table standing massage oil and herbs">
-                                    <div class="product-card__img-text">smell the oil and herbs</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesRelax fade">
+                            <div class="numbertext">3 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-relax_pack_03-brooke_lark-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-relax_pack_03-brooke_lark-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-relax_pack_03-brooke_lark-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-relax_pack_03-brooke_lark-unsplash.jpg"
+                                    alt="on a table standing massage oil and herbs">
+                                <div class="product-card__img-text">smell the oil and herbs</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesRelax fade">
-                                <div class="numbertext">4 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-relax_pack_04-engin_akyurt-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-relax_pack_04-engin_akyurt-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-relax_pack_04-engin_akyurt-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-relax_pack_04-engin_akyurt-unsplash.jpg"
-                                        alt="a woman laying on her stomach with massage stones on her back">
-                                    <div class="product-card__img-text">new massage therapies</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesRelax fade">
+                            <div class="numbertext">4 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-relax_pack_04-engin_akyurt-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-relax_pack_04-engin_akyurt-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-relax_pack_04-engin_akyurt-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-relax_pack_04-engin_akyurt-unsplash.jpg"
+                                    alt="a woman laying on her stomach with massage stones on her back">
+                                <div class="product-card__img-text">new massage therapies</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesRelax fade">
-                                <div class="numbertext">5 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-relax_pack_05-sixteen-miles-out-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-relax_pack_05-sixteen-miles-out-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-relax_pack_05-sixteen-miles-out-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-relax_pack_05-sixteen-miles-out-unsplash.jpg"
-                                        alt="three candles burning in front of an window">
-                                    <div class="product-card__img-text">... just relax ...</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesRelax fade">
+                            <div class="numbertext">5 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-relax_pack_05-sixteen-miles-out-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-relax_pack_05-sixteen-miles-out-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-relax_pack_05-sixteen-miles-out-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-relax_pack_05-sixteen-miles-out-unsplash.jpg"
+                                    alt="three candles burning in front of an window">
+                                <div class="product-card__img-text">... just relax ...</div>
+                            </picture>
                         </div>
                     </div>
                     <p>This months relax weekend break has you relaxing in one of the worlds best spas. You will feel
@@ -276,123 +286,124 @@
                     <section class="product-card-button">
                         <a href="booking.html"><button class="button"><i class="fas fa-shopping-cart"></i>
                                 booking</button></a>
-                        <button class="button"><i class="fas fa-info"></i> package info</button>
-                        <button class="button"><i class="fas fa-file-download"></i> flyer</button>
+                        <a href="#"><button class="button"><i class="fas fa-info"></i> package info</button></a>
+                        <a href="#"><button class="button"><i class="fas fa-file-download"></i> flyer</button></a>
                     </section>
                 </div>
 
+                <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
                 <div id="discover_pack">
                     <div class="top">
-                        <h2 class="product-card__heading"><i class="fas fa-binoculars"></i> discover pack</h2>
-                        <div class="slideshow-container">
+                        <h2><i class="fas fa-binoculars"></i> discover pack</h2>
 
-                            <div class="mySlidesDiscover fade">
-                                <div class="numbertext">1 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_01-jordan_harrison_Hjgg-unsplash.jpg"
-                                        alt="a ship in the harbor of Dublin">
-                                    <div class="product-card__img-text">discover the past</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesDiscover fade">
+                            <div class="numbertext">1 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-discover_pack_01-jordan_harrison_Hjgg-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_01-jordan_harrison_Hjgg-unsplash.jpg"
+                                    alt="a ship in the harbor of Dublin">
+                                <div class="product-card__img-text">discover the past</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesDiscover fade">
-                                <div class="numbertext">2 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-discover_pack_02-hanna_may-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-discover_pack_02-hanna_may-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-discover_pack_02-hanna_may-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_02-hanna_may-unsplash.jpg"
-                                        alt="Dublin's trinity university library">
-                                    <div class="product-card__img-text">learn something old</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesDiscover fade">
+                            <div class="numbertext">2 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-discover_pack_02-hanna_may-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-discover_pack_02-hanna_may-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-discover_pack_02-hanna_may-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_02-hanna_may-unsplash.jpg"
+                                    alt="Dublin's trinity university library">
+                                <div class="product-card__img-text">learn something old</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesDiscover fade">
-                                <div class="numbertext">3 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-discover_pack_03-mark-dalton-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-discover_pack_03-mark-dalton-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-discover_pack_03-mark-dalton-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_03-mark-dalton-unsplash.jpg"
-                                        alt="historic building at a river bank at night">
-                                    <div class="product-card__img-text">discover the roots</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesDiscover fade">
+                            <div class="numbertext">3 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-discover_pack_03-mark-dalton-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-discover_pack_03-mark-dalton-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-discover_pack_03-mark-dalton-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_03-mark-dalton-unsplash.jpg"
+                                    alt="historic building at a river bank at night">
+                                <div class="product-card__img-text">discover the roots</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesDiscover fade">
-                                <div class="numbertext">4 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-discover_pack_04-joshua_dlz-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-discover_pack_04-joshua_dlz-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-discover_pack_04-joshua_dlz-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_04-joshua_dlz-unsplash.jpg"
-                                        alt="two people parachuting together">
-                                    <div class="product-card__img-text">discover the nightlife</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesDiscover fade">
+                            <div class="numbertext">4 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-discover_pack_04-joshua_dlz-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-discover_pack_04-joshua_dlz-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-discover_pack_04-joshua_dlz-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_04-joshua_dlz-unsplash.jpg"
+                                    alt="two people parachuting together">
+                                <div class="product-card__img-text">discover the nightlife</div>
+                            </picture>
+                        </div>
 
-                            <div class="mySlidesDiscover fade">
-                                <div class="numbertext">5 / 5</div>
-                                <picture class="product-card__img">
-                                    <source media="(min-width:63.75em)"
-                                        srcset="assets/images/large/large-discover_pack_05-george_bakos-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:37.5em)"
-                                        srcset="assets/images/medium/medium-discover_pack_05-george_bakos-unsplash.webp"
-                                        type="image/webp">
-                                    <source media="(min-width:0.5em)"
-                                        srcset="assets/images/small/small-discover_pack_05-george_bakos-unsplash.webp"
-                                        type="image/webp">
-                                    <img src="assets/images/small/small-discover_pack_05-george_bakos-unsplash.jpg"
-                                        alt="a skydiver navigating through the sunset sky">
-                                    <div class="product-card__img-text">taste it</div>
-                                </picture>
-                            </div>
+                        <div class="mySlidesDiscover fade">
+                            <div class="numbertext">5 / 5</div>
+                            <picture class="product-card__img">
+                                <source media="(min-width:63.75em)"
+                                    srcset="assets/images/large/large-discover_pack_05-george_bakos-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:37.5em)"
+                                    srcset="assets/images/medium/medium-discover_pack_05-george_bakos-unsplash.webp"
+                                    type="image/webp">
+                                <source media="(min-width:0.5em)"
+                                    srcset="assets/images/small/small-discover_pack_05-george_bakos-unsplash.webp"
+                                    type="image/webp">
+                                <img src="assets/images/small/small-discover_pack_05-george_bakos-unsplash.jpg"
+                                    alt="a skydiver navigating through the sunset sky">
+                                <div class="product-card__img-text">taste it</div>
+                            </picture>
                         </div>
 
                     </div>
                     <p>This months discovery weekend break takes to Dublin. Visit the guinness brewery (including
-                        tasting
-                        &#128521;). Discover Dublin's night life and its past. </p>
+                        tasting &#128521;). Discover Dublin's night life and its past. </p>
                     <section class="product-card-button">
                         <a href="booking.html"><button class="button"><i class="fas fa-shopping-cart"></i>
                                 booking</button></a>
-                        <button class="button"><i class="fas fa-info"></i> package info</button>
-                        <button class="button"><i class="fas fa-file-download"></i> flyer</button>
+                        <a href="#"><button class="button"><i class="fas fa-info"></i> package info</button></a>
+                        <a href="#"><button class="button"><i class="fas fa-file-download"></i> flyer</button></a>
                     </section>
                 </div>
             </section>
         </article>
         <!-- <<< end  -->
+        <!-- >>> start testimony -->
         <article class="section">
+            <!-- bootstrap carousel -->
             <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <!-- defines the carousel with 5 slides, more could be added -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -407,18 +418,23 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
                         aria-label="Slide 6"></button>
                 </div>
+                <!-- defines the slide of the carousel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <!-- user_1 -->
                         <article class="user">
                             <figure>
                                 <header>
+                                    <!-- user image -->
                                     <img src="assets/images/face_users/man_1.webp" alt="">
                                     <div>
                                         <figcaption>
+                                            <!-- user name -->
                                             <h3>Chris Fox.</h3>
                                         </figcaption>
+                                        <!-- user occupation -->
                                         <p>CEO at Mighty Schools.</p>
+                                        <!-- start rating the class "checked" gives color to the star -->
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
                                         <span class="fa fa-star checked"></span>
@@ -426,11 +442,11 @@
                                         <span class="fa fa-star"></span>
                                     </div>
                                 </header>
+                                <!-- user quote/comment -->
                                 <blockquote><i class="fas fa-quote-left"></i>&nbsp;I really liked the service which was
-                                    provided by the "weekend breaker".
-                                    Unfortunately we
-                                    where unlucky with our flight to the destination, which was delayed. The "action
-                                    package" is a must if you are looking for an exciting break. Highly recommended!
+                                    provided by the "weekend breaker". Unfortunately, we where unlucky with our flight
+                                    to the destination, which was delayed. The "action package" is a must if you are
+                                    looking for an exciting break. Highly recommended!
                                     &nbsp;<i class="fas fa-quote-right"></i></blockquote>
                             </figure>
                         </article>
@@ -572,6 +588,8 @@
                 </button>
             </div>
         </article>
+        <!-- <<< end testimony -->
+        <!-- >>> start faq -->
         <article class="section faq">
             <details id="faq">
                 <summary>
@@ -579,8 +597,10 @@
                 </summary>
                 <details>
                     <summary>
+                        <!-- faq question -->
                         <h3>Can I bring my pet?</h3>
                     </summary>
+                    <!-- faq answer -->
                     <p>
                         You can bring your pet on the "relax pack" and "discovery pack" tour. But we do not recommend to
                         bring any animals to the "action pack" tour.
@@ -605,34 +625,46 @@
                 </details>
             </details>
         </article>
+        <!-- <<< end faq -->
+        <!-- >>> start about us -->
         <article class="section about_us">
             <details id="about_us">
                 <summary>
                     <h2><i class="fas fa-user-tie"></i> about us</h2>
                 </summary>
                 <h3>about me :</h3>
+                <!-- profile image of the owner -->
                 <img class="profile_me" src="assets/images/profile_me/profile_me_1.webp" alt="">
+                <!-- owner description -->
                 <p>Hello, my name is Zoltán Kepes and I am the owner of the "Weekend Breaker". I hope you will enjoy our
-                    weekend packages and get the adventure or rest you are looking for. Because ...<br><em>You deserve
-                        it!</em>
+                    weekend packages and get the adventure or rest you are looking for. Because ...<br>
+                    <em>You deserve it!</em>
                 </p>
                 <h3>meet the team :</h3>
+                <!-- image of the team -->
                 <!-- Image Map Generated by http://www.image-map.net/ -->
                 <img class="profile_team" src="assets/images/jason-goodman-fznQW-kn5VU-unsplash_small.webp"
                     usemap="#image-map">
+                <!-- the image has been "mapped", when the user hovers over the mapped part the "title" shows  -->
                 <map name="image-map">
-                    <area target="" alt="" title="Jason Cuber" href="" coords="47,52,14" shape="circle">
-                    <area target="" alt="" title="Sahra Alto" href="" coords="15,25,16" shape="circle">
+                    <area target="" alt="image of 'Jason Cuber'" title="Jason Cuber" href="" coords="47,52,14"
+                        shape="circle">
+                    <area target="" alt="image of 'Sahra Alto'" title="Sahra Alto" href="" coords="15,25,16"
+                        shape="circle">
                 </map>
+                <!-- team description -->
                 <p>Our team is mad up of Jason and Sahra. Jason is responsible for reserving the accommodations and
                     creating the time table for the packages. Sahra is our marketing expert and makes sure everyone
                     knows about us.<br> Both are working incredible hard because ...<br><em>You deserve it!</em></p>
+
                 <h3>the company :</h3>
+                <!-- company description -->
                 <p>Is a young company founded in 2021 by Zoltán Kepes. It has been growing since that and is looking for
                     new ways to expand into new markets.</p>
             </details>
         </article>
-        <!-- contact us -->
+        <!-- <<< end about us -->
+        <!-- >>> start contact us -->
         <section class="section">
             <details id="contact_us">
                 <summary>
@@ -641,10 +673,12 @@
                 <h3>Find and contact us:</h3>
                 <ul class="contact">
                     <li><i class="fas fa-phone-square-alt"></i> call us:<ul>
+                            <!-- opens user phone app -->
                             <li><a href="tel:+123456789">+123456789</a></li>
                         </ul>
                     </li>
                     <li><i class="fas fa-at"></i> email us:<ul>
+                            <!-- opens user email app -->
                             <li><a href="mailto:zoltan.the.kepes@gmail.com">zoltan.the.kepes@gmail.com</a></li>
                         </ul>
                     </li>
@@ -654,11 +688,12 @@
                     </li>
                 </ul>
 
-                <!--The div element for the map -->
+                <!--The div element for the map, map is inserted by JavaScript "google_maps.js" -->
                 <div id="map"></div>
                 <br>
             </details>
         </section>
+        <!-- <<< end contact us -->
     </main>
     <footer>
         <section class="socialmedia">
@@ -667,7 +702,7 @@
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
         </section>
         <section class="copy">
-            <p>"Weekend Breaker"&reg; is a Registered Tradmark @ Zoltán Kepes<br>&copy; All rights reserved</p>
+            <p>"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights reserved</p>
         </section>
     </footer>
 
@@ -675,9 +710,9 @@
     <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>
 
     <!-- connection to "bootstarp" -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script> -->
+    </script>
 
     <!-- links to google map JavaScrit, was original in html document, but I have separated it -->
     <script src="assets/js/google_map.js"></script>

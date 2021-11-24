@@ -109,7 +109,7 @@ button is removed on wider view (.hide-desktop)*/
 
 /* <<< end nav bar */
 
-/* header 1st value is logo, 2nd value is background, if values not separated by "'" than they apply to both*/
+/* 1st value is logo, 2nd value is background, if values not separated by "," than they apply to both*/
 .header-page {
   background-color: #fff;
   background-image: url(/assets/images/icons/weekend-breaker_logo_icon.png), url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
@@ -118,7 +118,7 @@ button is removed on wider view (.hide-desktop)*/
   background-repeat: no-repeat;
 }
 
-/* section class element */
+/* styles the sections of the page */
 .section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 90%;
@@ -144,22 +144,19 @@ button is removed on wider view (.hide-desktop)*/
   background: linear-gradient(63deg, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 89%, rgba(235, 100, 36, 1) 100%);
 }
 
+/* aligns (centers) the image of the product caed */
 .product-card__img img {
   width: 95%;
   margin: auto;
 }
 
+/* styles the "slogan" for the product card images, no <figcaption> because the slogan does not describe the image */
 .product-card__img-text {
   background-color: #fff;
   color: black;
   font-family: cursive, Arial, Helvetica, sans-serif;
   width: 95%;
   margin: auto;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
 }
 
 /* Number text (1/3 etc) */
@@ -176,7 +173,7 @@ button is removed on wider view (.hide-desktop)*/
 .mySlidesAction,
 .mySlidesRelax,
 .mySlidesDiscover {
-  display: none;
+  position: relative;
 }
 
 /* <<< end card */
@@ -209,6 +206,12 @@ button is removed on wider view (.hide-desktop)*/
   }
 }
 
+/* arranges buttons in the product card */
+.product-card-button {
+  display: flex;
+  flex-direction: column;
+}
+
 /* <<< end  Fading animation */
 
 /* >>> start button and menu*/
@@ -235,73 +238,87 @@ button is removed on wider view (.hide-desktop)*/
   width: 6rem;
 }
 
+/* button hidden on mobile first */
 .button--show-desktop {
   display: none;
 }
 
+/* feedback to user that the element is a button
+because it changes color when hovered and pressed */
 .button:hover,
 .button:focus {
   background: var(--color-button-selected);
 }
 
+/* feedback to user that the element is a link
+because it changes color when hovered*/
 footer i:hover {
   color: var(--color-button-selected);
 }
 
 /* <<< end button and menu */
 
-/* >>> start display inline block for summary heading */
+/* style heading for summary*/
 summary h2,
 summary h3 {
   display: inline-block;
 }
 
-/* <<< end display inline block for summary heading */
-
 /* >>> start user rating testimonies */
+
+/* gives color to positive user rated star */
 .checked {
   color: orange;
 }
 
+/* groups user image with user name, occupation and rating together */
 .user header {
+  width: 90%;
+  margin-left: 5%;
   display: flex;
   justify-content: space-evenly;
 }
 
+/* defines the same size for all user images */
 .user img {
   display: inline-block;
   border-radius: 50%;
   width: 6rem;
   height: 6rem;
-  margin: 0 1rem;
-  float: left;
+  margin: 1rem 1rem;
 }
 
+/* name of the user */
 .user h3 {
   margin-bottom: 0.1rem;
   font-size: 1.8rem;
 }
 
+/* user occupation */
 .user figcaption+p {
   font-size: 1rem;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0.5rem;
 }
 
+/* user quote */
 .user blockquote {
   font-style: italic;
   font-size: 1.3rem;
-  margin: 0 3.5rem 3rem 3.5rem;
+  margin: 1rem 12% 1rem 12%;
   height: 14.5rem;
 }
 
 /* <<< end user rating testimonies */
 
-/* start faq */
+/* styles faq text */
 .faq p {
   font-style: italic;
 }
 
 /* >>> start about us */
+
+/* defines the size of the owners profile picture */
 .profile_me {
   height: 10rem;
   width: auto;
@@ -318,10 +335,12 @@ summary h3 {
   display: table;
 }
 
+/* emphasizes the slogan */
 .about_us em {
   font-weight: bolder;
 }
 
+/* profile picture of the team */
 .profile_team {
   margin: 1rem;
   margin-left: 2rem;
@@ -338,6 +357,7 @@ summary h3 {
   list-style-type: none;
 }
 
+/* styles list items for contact */
 .contact>li>ul>li {
   font-style: italic;
   font-weight: normal;
@@ -361,6 +381,7 @@ summary h3 {
   justify-content: space-evenly;
 }
 
+/* color for social media icons */
 .socialmedia i {
   color: var(--color-headings);
 }
@@ -387,9 +408,22 @@ footer p {
 /* <<< end footer */
 
 /* <<< end social media links */
+
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
-/* breakpoint for tablets 2 column at 600px == font size standard 16px == 37.5em */
+/* at 400px == font size standard 16px == 25em */
+@media screen and (min-width: 25em) {
+
+  /* testimony, group user image with name, occupation tighter together */
+  .user header {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+/* media queries do not take font size from the html element,
+16px == 1em and not 62.5% == 10px == 1em */
+/* at 600px == font size standard 16px == 37.5em */
 @media screen and (min-width: 37.5em) {
   body {
     font-size: 1.8rem;
@@ -407,16 +441,21 @@ footer p {
     font-size: 2.4rem;
   }
 
+  /* hide element when screen expanse */
   .hide-desktop {
     display: none;
   }
 
+  /* shows element when screen expanse */
   .button--show-desktop {
     display: inline-block;
   }
 
+  /* changes nav bar elements to inline-block, they are not inside the hamburger any more */
   .hamburger_menu {
+    /* is needed otherwise elements do not appear */
     display: inline-block;
+    /* is needed otherwise background dose not float behind navbar */
     float: left;
     position: static;
     top: 5rem;
@@ -480,6 +519,12 @@ footer p {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  /* testimony, group user image with name, occupation tighter together */
+  .user header {
+    width: 40%;
+    margin-left: 30%;
+  }
 }
 
 /* media queries do not take font size from the html element,
@@ -499,7 +544,7 @@ footer p {
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
-/* breakpoint for desktop 3 column at 1020px == font size standard 16px == 63.75em */
+/* at 1020px == font size standard 16px == 63.75em */
 @media screen and (min-width: 63.75em) {
   body {
     font-size: 1.8rem;

@@ -5,18 +5,23 @@ showSlidesAction();
 function showSlidesAction() {
     var i;
     var slidesAction = document.getElementsByClassName("mySlidesAction");
+    // hides all slides by setting there display: none;
     for (i = 0; i < slidesAction.length; i++) {
         slidesAction[i].style.display = "none";
     }
+    // if the slide index becomes longer than the total length of the slides, than it is set back to 1
     slideIndexAction++;
     if (slideIndexAction > slidesAction.length) {
         slideIndexAction = 1
     }
+    // changes the slide to display:block, so it is visible
     slidesAction[slideIndexAction - 1].style.display = "block";
-    setTimeout(showSlidesAction, 10000); // Change image every 10 seconds
+    // calls the slide function again in 10 seconds
+    setTimeout(showSlidesAction, 10000);
 }
+// <<< end action slide
 
-// >>> start relax slide
+// >>> start relax slide, works the same as action slide, see action slide for explanation
 var slideIndexRelax = 0;
 showSlidesRelax();
 
@@ -31,10 +36,11 @@ function showSlidesRelax() {
         slideIndexRelax = 1
     }
     slidesRelax[slideIndexRelax - 1].style.display = "block";
-    setTimeout(showSlidesRelax, 10000); // Change image every 10 seconds
+    setTimeout(showSlidesRelax, 10000);
 }
+// <<< end relax slide
 
-// >>> start discover slide
+// >>> start discover slide, works the same as action slide, see action slide for explanation
 var slideIndexDiscover = 0;
 showSlidesDiscover();
 
@@ -49,5 +55,6 @@ function showSlidesDiscover() {
         slideIndexDiscover = 1
     }
     slidesDiscover[slideIndexDiscover - 1].style.display = "block";
-    setTimeout(showSlidesDiscover, 10000); // Change image every 10 seconds
+    setTimeout(showSlidesDiscover, 10000);
 }
+// <<< end discovery slide
