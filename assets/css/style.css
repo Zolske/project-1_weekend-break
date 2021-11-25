@@ -389,6 +389,8 @@ summary h3 {
 
 /* >>> start social media */
 .socialmedia {
+  padding-top: 2rem;
+  margin: 2rem 0;
   font-size: 6rem;
   display: flex;
   justify-content: space-evenly;
@@ -581,6 +583,20 @@ footer p {
   .profile-text {
     width: 70%;
     margin-left: 15%;
+  }
+
+  /* >>> start contact us */
+  .contact>li {
+    font-size: 3rem;
+  }
+
+  /* styles list items for contact */
+  .contact>li>ul>li {
+    font-size: 2rem;
+  }
+
+  .copy p {
+    font-size: 1.5rem;
   }
 }
 
