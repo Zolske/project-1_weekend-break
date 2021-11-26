@@ -19,32 +19,76 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="nav--bar">
         <ul>
-            <li><a href="index.html"><button class="button nav_button"><i class="fas fa-home"></i></button></a></li>
-            <li class="dropdown">
-                <button class="button nav_button" onclick="myFunction()"><i class="fas fa-bars"></i></button>
-                <ul id="toggel_js" class="hamburger_menu">
-                    <li><a href="booking.html"> <button class="button" onclick="myFunction()"><i
-                                    class="fas fa-shopping-cart"></i>
-                                booking</button></a></li>
-                    <li><a href="booking.html"> <button class="button" onclick="myFunction()"><i
-                                    class="fas fa-info"></i>
-                                package info</button></a>
-                    </li>
-                    <li><a href="index.html#faq"> <button class="button" onclick="detailsOpener_faq()"><i
-                                    class="far fa-question-circle"></i> faq</button></a>
-                    </li>
-                    <li><a href="index.html#about_us"> <button class="button" onclick="detailsOpener_about_us()"><i
-                                    class="fas fa-user-tie"></i> about
-                                us</button></a>
-                    </li>
-                    <li><a href="index.html#contact_us"> <button class="button" onclick="detailsOpener_contact_us()"><i
-                                    class="fas fa-address-book"></i> contact
-                                us</button></a>
-                    </li>
-                </ul>
+            <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
+            <li>
+                <a href="index.html" aria-label="go to home page">
+                    <button class="button button--mobile hide-desktop float-left--mobile-first" title="go to home page">
+                        <i class="fas fa-home"></i>
+                    </button>
+                </a>
             </li>
+            <li>
+                <!--"hamburger button": showHamburger(), JavaScript => dropdown_menu.js, toggles between showing & hiding "hamburger menu" -->
+                <button class="button button--mobile hide-desktop float-right" onclick="showHamburger()"
+                    aria-label="opens sub menu" title="opens sub menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </li>
+            <!-- "hamburger menu, styles are defined in css (display: none), JavaScript targets hamburger_menu[0] class to show, is trigger through click event on "hamburger button" -->
+            <div class="hamburger_menu">
+                <!-- home button dose not appear on mobile first but when screen gets wider -->
+                <li class="float-left">
+                    <a href="index.html" aria-label="go to home page">
+                        <button class="button button--show-desktop" title="go to home page">
+                            <i class="fas fa-home"></i> home
+                        </button>
+                    </a>
+                </li>
+                <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
+                <li class="float-right float-left">
+                    <a href="booking.html" aria-label="go to booking page">
+                        <button class="button" title="go to booking page">
+                            <i class="fas fa-shopping-cart"></i> book
+                        </button>
+                    </a>
+                </li>
+                <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
+                <li class="float-right float-left">
+                    <a href="more_info.html" aria-label="go to package info page">
+                        <button class="button" title="go to package info page">
+                            <i class="fas fa-info"></i> package
+                        </button>
+                    </a>
+                </li>
+                <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="float-right">
+                    <a href="index.html#faq" aria-label="go to faq section on home page">
+                        <button class="button" onclick="detailsOpener_faq()" title="go to faq section on the home page">
+                            <i class="far fa-question-circle"></i> faq
+                        </button>
+                    </a>
+                </li>
+                <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="float-right">
+                    <a href="index.html#about_us" aria-label="go to about_us section on home page">
+                        <button class="button" onclick="detailsOpener_about_us()"
+                            title="go to about us section on the home page">
+                            <i class="fas fa-user-tie"></i> about us
+                        </button>
+                    </a>
+                </li>
+                <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                <li class="float-right">
+                    <a href="index.html#contact_us" aria-label="go to contact_us section on home page">
+                        <button class="button" onclick="detailsOpener_contact_us()"
+                            title="go to contact section on the home page">
+                            <i class="fas fa-address-book"></i> contact
+                        </button>
+                    </a>
+                </li>
+            </div>
         </ul>
     </nav>
     <header class="header-page">

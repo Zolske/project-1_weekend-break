@@ -21,41 +21,73 @@
     <nav class="nav--bar">
         <ul>
             <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
-            <li><a href="index.html"><button class="button button--mobile hide-desktop float-left--mobile-first"><i
-                            class="fas fa-home"></i></button></a></li>
+            <li>
+                <a href="index.html" aria-label="go to home page">
+                    <button class="button button--mobile hide-desktop float-left--mobile-first" title="go to home page">
+                        <i class="fas fa-home"></i>
+                    </button>
+                </a>
+            </li>
             <li>
                 <!--"hamburger button": showHamburger(), JavaScript => dropdown_menu.js, toggles between showing & hiding "hamburger menu" -->
-                <button class="button button--mobile hide-desktop float-right" onclick="showHamburger()"><i
-                        class="fas fa-bars"></i></button>
+                <button class="button button--mobile hide-desktop float-right" onclick="showHamburger()"
+                    aria-label="opens sub menu" title="opens sub menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </li>
             <!-- "hamburger menu, styles are defined in css (display: none), JavaScript targets hamburger_menu[0] class to show, is trigger through click event on "hamburger button" -->
             <div class="hamburger_menu">
                 <!-- home button dose not appear on mobile first but when screen gets wider -->
-                <li class="float-left"><a href="index.html"><button class="button button--show-desktop">
-                            <i class="fas fa-home"></i> home</button></a></li>
+                <li class="float-left">
+                    <a href="index.html" aria-label="go to home page">
+                        <button class="button button--show-desktop" title="go to home page">
+                            <i class="fas fa-home"></i> home
+                        </button>
+                    </a>
+                </li>
                 <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
-                <li class="float-right float-left"><a href="booking.html"> <button class="button">
-                            <i class="fas fa-shopping-cart"></i> book</button></a></li>
+                <li class="float-right float-left">
+                    <a href="booking.html" aria-label="go to booking page">
+                        <button class="button" title="go to booking page">
+                            <i class="fas fa-shopping-cart"></i> book
+                        </button>
+                    </a>
+                </li>
                 <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
-                <li class="float-right float-left"><a href="more_info.html"> <button class="button">
-                            <i class="fas fa-info"></i> package</button></a>
+                <li class="float-right float-left">
+                    <a href="more_info.html" aria-label="go to package info page">
+                        <button class="button" title="go to package info page">
+                            <i class="fas fa-info"></i> package
+                        </button>
+                    </a>
                 </li>
                 <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
-                <li class="float-right"><a href="index.html#faq"> <button class="button" onclick="detailsOpener_faq()">
-                            <i class="far fa-question-circle"></i> faq</button></a>
+                <li class="float-right">
+                    <a href="index.html#faq" aria-label="go to faq section on home page">
+                        <button class="button" onclick="detailsOpener_faq()" title="go to faq section on the home page">
+                            <i class="far fa-question-circle"></i> faq
+                        </button>
+                    </a>
                 </li>
                 <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
-                <li class="float-right"><a href="index.html#about_us"> <button class="button"
-                            onclick="detailsOpener_about_us()">
-                            <i class="fas fa-user-tie"></i> about us</button></a>
+                <li class="float-right">
+                    <a href="index.html#about_us" aria-label="go to about_us section on home page">
+                        <button class="button" onclick="detailsOpener_about_us()"
+                            title="go to about us section on the home page">
+                            <i class="fas fa-user-tie"></i> about us
+                        </button>
+                    </a>
                 </li>
                 <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
-                <li class="float-right"><a href="index.html#contact_us"> <button class="button"
-                            onclick="detailsOpener_contact_us()">
-                            <i class="fas fa-address-book"></i> contact</button></a>
+                <li class="float-right">
+                    <a href="index.html#contact_us" aria-label="go to contact_us section on home page">
+                        <button class="button" onclick="detailsOpener_contact_us()"
+                            title="go to contact section on the home page">
+                            <i class="fas fa-address-book"></i> contact
+                        </button>
+                    </a>
                 </li>
             </div>
-
         </ul>
     </nav>
     <header class="header-page">
@@ -136,11 +168,17 @@
                 <P class="price flash">Only £ 299,- per person !</p>
                 <!-- grouped together in an class so flex treats them as one unit not individually -->
                 <section class="product-card-button">
-                    <a href="booking.html"><button class="button" title="go to booking page"><i
-                                class="fas fa-shopping-cart"></i>
-                            book</button></a>
-                    <a href="assets/docs/flyer_action.pdf" download><button class="button"
-                            title="download the pdf flyer"><i class="fas fa-file-download"></i> flyer</button></a>
+                    <a href="booking.html" aria-label="go to booking page">
+                        <button class="button" title="go to booking page">
+                            <i class="fas fa-shopping-cart"></i> book
+                        </button>
+                    </a>
+                    <a href="assets/docs/flyer_action.pdf" download
+                        aria-label="downloads a pdf flyer with the package bullet points">
+                        <button class="button" title="download the pdf flyer">
+                            <i class="fas fa-file-download"></i> flyer
+                        </button>
+                    </a>
                 </section>
             </article>
             <!-- relax pack -->
@@ -207,11 +245,17 @@
                 <P class="price flash">Only £ 279,- per person !</p>
                 <!-- grouped together in an class so flex treats them as one unit not individually -->
                 <section class="product-card-button">
-                    <a href="booking.html"><button class="button"><i class="fas fa-shopping-cart"></i>
-                            book</button></a>
-                    <a href="assets/docs/flyer_relax.pdf" download=""><button class="button"
-                            title="download the pdf flyer"><i class="fas fa-file-download"></i>
-                            flyer</button></a>
+                    <a href="booking.html" aria-label="go to booking page">
+                        <button class="button">
+                            <i class="fas fa-shopping-cart"></i> book
+                        </button>
+                    </a>
+                    <a href="assets/docs/flyer_relax.pdf" download
+                        aria-label="downloads a pdf flyer with the package bullet points">
+                        <button class="button" title="download the pdf flyer">
+                            <i class="fas fa-file-download"></i> flyer
+                        </button>
+                    </a>
                 </section>
             </article>
         </article>
@@ -246,9 +290,12 @@
                                 <li>pick up from the airport</li>
                                 <li>three star accommodation check-in</li>
                                 <li>lunch at the accommodation's buffet</li>
-                                <li>a trip to the Guinness brewery (including tasting) <a
-                                        href="https://www.guinness-storehouse.com/en/guinness-brewery-tour"
-                                        target="_blank">link to Brewery</a></li>
+                                <li>a trip to the Guinness brewery (including tasting)
+                                    <a href="https://www.guinness-storehouse.com/en/guinness-brewery-tour"
+                                        target="_blank"
+                                        aria-label="go to Guinness brewery tour page (open new tab)">link to Brewery
+                                    </a>
+                                </li>
                                 <li>discover Dublin's nightlife with our local tourist guide Peter</li>
                             </ul>
                         </td>
@@ -260,8 +307,11 @@
                                 <li>breakfast at the accommodation's buffet</li>
                                 <li>our tourist guide Peter will show you the city</li>
                                 <li>lunch at a restaurant in Dublin</li>
-                                <li>a tour through Dublin Castle <a href="https://www.dublincastle.ie/"
-                                        target="_blank">link to Dublin Castle</a></li>
+                                <li>a tour through Dublin Castle
+                                    <a href="https://www.dublincastle.ie/" target="_blank"
+                                        aria-label="go to Dublin Castle page (open new tab)">link to Dublin Castle
+                                    </a>
+                                </li>
                                 <li>drive back to the airport</li>
                             </ul>
                         </td>
@@ -271,19 +321,35 @@
             <P class="price flash">Only £ 229,- per person !</p>
             <!-- grouped together in an class so flex treats them as one unit not individually -->
             <section class="product-card-button">
-                <a href="booking.html"><button class="button"><i class="fas fa-shopping-cart"></i>
-                        book</button></a>
-                <a href="assets/docs/flyer_discover.pdf" download><button class="button"
-                        title="download the pdf flyer"><i class="fas fa-file-download"></i> flyer</button></a>
+                <a href="booking.html" aria-label="go to booking page">
+                    <button class="button">
+                        <i class="fas fa-shopping-cart"></i> book
+                    </button>
+                </a>
+                <a href="assets/docs/flyer_discover.pdf" download
+                    aria-label="downloads a pdf flyer with the package bullet points">
+                    <button class="button" title="download the pdf flyer">
+                        <i class="fas fa-file-download"></i> flyer
+                    </button>
+                </a>
             </section>
         </article>
     </main>
     <footer>
         <section class="socialmedia">
             <!-- links to social media -->
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/?lang=en-gb" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="go to our facebook page (opens new tab)"
+                title="go to our facebook page">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://twitter.com/?lang=en-gb" target="_blank"
+                aria-label="go to our twitter page (opens new tab)" title="go to our twitter page">
+                <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="go to our instagram page (opens new tab)"
+                title="go to our instagram page">
+                <i class="fab fa-instagram-square"></i>
+            </a>
         </section>
         <section class="copy">
             <p>"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights reserved</p>
