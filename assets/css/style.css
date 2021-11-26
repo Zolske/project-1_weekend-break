@@ -464,7 +464,41 @@ td {
 .price {
   color: var(--color-headings);
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+  height: 3rem;
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: 1s;
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  margin: 2rem 0;
+}
+
+@-webkit-keyframes flash {
+  from {
+    font-size: 1.5rem;
+    opacity: .6
+  }
+
+  to {
+    font-size: 1.6rem;
+    opacity: 1
+  }
+}
+
+@keyframes flash {
+  from {
+    font-size: 1.5rem;
+    opacity: .6
+  }
+
+  to {
+    font-size: 1.6rem;
+    opacity: 1
+  }
 }
 
 /* <<< end more_info page */
@@ -650,6 +684,30 @@ td {
     border-collapse: collapse;
     font-size: 2rem;
     padding: 2rem;
+  }
+
+  @-webkit-keyframes flash {
+    from {
+      font-size: 2.5rem;
+      opacity: .6
+    }
+
+    to {
+      font-size: 2.6rem;
+      opacity: 1
+    }
+  }
+
+  @keyframes flash {
+    from {
+      font-size: 2.5rem;
+      opacity: .6
+    }
+
+    to {
+      font-size: 2.6rem;
+      opacity: 1
+    }
   }
 }
 
