@@ -411,7 +411,7 @@ summary h3 {
 /* >>> start footer */
 footer {
   background-color: white;
-  background-image: url(/assets/images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
+  background-image: url(../images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
   background-size: cover;
   margin: 1rem 0 0 0;
 }
@@ -423,6 +423,51 @@ footer p {
 /* <<< end footer */
 
 /* <<< end social media links */
+
+/* >>> start more_info page */
+
+.pack-image img {
+  width: 95%;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+table {
+  width: 95%;
+  margin: 2.5%;
+  margin-bottom: 1rem;
+}
+
+tr,
+th,
+td {
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+th {
+  padding-right: 1rem;
+}
+
+td {
+  text-align: left;
+  padding: 1rem;
+  border-left: dashed var(--color-button-selected) 1px;
+}
+
+.table-border {
+  border-top: dashed var(--color-button-selected) 1px;
+  border-bottom: dashed var(--color-button-selected) 1px;
+}
+
+.price {
+  color: var(--color-headings);
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+/* <<< end more_info page */
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
@@ -598,6 +643,14 @@ footer p {
   .copy p {
     font-size: 1.5rem;
   }
+
+  tr,
+  th,
+  td {
+    border-collapse: collapse;
+    font-size: 2rem;
+    padding: 2rem;
+  }
 }
 
 /* media queries do not take font size from the html element,
@@ -649,6 +702,16 @@ footer p {
 
   .user-quote {
     height: 28rem;
+  }
+
+  /* changes table size on wider screens */
+  table {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  th {
+    font-size: 3rem;
   }
 
   /* increase height of the heading when text becomes bigger */
