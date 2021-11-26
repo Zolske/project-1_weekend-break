@@ -426,6 +426,16 @@ footer p {
 
 /* >>> start more_info page */
 
+.include-all {
+  margin: auto;
+  width: fit-content;
+  text-align: left;
+}
+
+.new-icon {
+  list-style: url(../images/icons/thumbs-up-icon-24.png);
+}
+
 .pack-image img {
   width: 95%;
   margin: auto;
