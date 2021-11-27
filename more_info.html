@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add bootstrap 5.0.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- sets different browser styles to basic -->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!-- link to stylesheet -->
@@ -17,8 +20,10 @@
 </head>
 
 <body>
-    <nav class="nav--bar">
-        <ul>
+
+    <!-- >>> start nav bar -->
+    <nav class="nav-bar">
+        <ul class="nav-bar__list">
             <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
             <li>
                 <a href="index.html" class="button button--mobile hide-desktop float-left--mobile-first"
@@ -35,7 +40,7 @@
             </li>
         </ul>
         <!-- "hamburger menu, styles are defined in css (display: none), JavaScript targets hamburger_menu[0] class to show, is trigger through click event on "hamburger button" -->
-        <ul class="hamburger_menu">
+        <ul class="nav-bar__hamburger nav-bar__list">
             <!-- home button dose not appear on mobile first but when screen gets wider -->
             <li class="float-left">
                 <a href="index.html" class="button button--show-desktop" title="go to home page"
@@ -79,9 +84,10 @@
             </li>
         </ul>
     </nav>
-    <header class="header-page">
+
+    <header class="header">
         <h1>This months packages.</h1>
-        <p id="intro-text">Find out more about this months packages.
+        <p id="header__intro">Find out more about this months packages.
         </p>
         <br>
     </header>
@@ -89,9 +95,9 @@
         <article class="section">
             <h3>included in all packages</h3>
             <ul class="include-all">
-                <li class="new-icon">airport transfer</li>
-                <li class="new-icon">accommodation</li>
-                <li class="new-icon">breakfast and lunch</li>
+                <li class="new-bullet">airport transfer</li>
+                <li class="new-bullet">accommodation</li>
+                <li class="new-bullet">breakfast and lunch</li>
             </ul>
             <!-- action pack -->
             <article class="section">
@@ -154,7 +160,7 @@
                 </table>
                 <P class="price flash">Only £ 299,- per person !</p>
                 <!-- grouped together in an class so flex treats them as one unit not individually -->
-                <section class="product-card-button">
+                <section class="product-card__button-align">
                     <a href="booking.html" class="button" title="go to booking page" aria-label="go to booking page">
                         <i class="fas fa-shopping-cart"></i> book
                     </a>
@@ -227,7 +233,7 @@
                 </table>
                 <P class="price flash">Only £ 279,- per person !</p>
                 <!-- grouped together in an class so flex treats them as one unit not individually -->
-                <section class="product-card-button">
+                <section class="product-card__button-align">
                     <a href="booking.html" class="button" title="go to booking page" aria-label="go to booking page">
                         <i class="fas fa-shopping-cart"></i> book
                     </a>
@@ -299,7 +305,7 @@
             </table>
             <P class="price flash">Only £ 229,- per person !</p>
             <!-- grouped together in an class so flex treats them as one unit not individually -->
-            <section class="product-card-button">
+            <section class="product-card__button-align">
                 <a href="booking.html" class="button" title="go to booking page" aria-label="go to booking page">
                     <i class="fas fa-shopping-cart"></i> book
                 </a>
@@ -311,7 +317,7 @@
         </article>
     </main>
     <footer>
-        <section class="socialmedia">
+        <section class="social-media">
             <!-- links to social media -->
             <a href="https://www.facebook.com/" target="_blank" aria-label="go to our facebook page (opens new tab)"
                 title="go to our facebook page">
@@ -326,11 +332,18 @@
                 <i class="fab fa-instagram-square"></i>
             </a>
         </section>
-        <section class="copy">
-            <p>"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights reserved</p>
+        <section>
+            <p class="copy">"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights
+                reserved</p>
         </section>
     </footer>
+    <!-- >>> end footer -->
 
+    <!-- connection to "bootstarp" -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        async defer>
+    </script>
     <!-- connection to "Font Awesome" -->
     <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>
     <!-- JavaScript for dropdown menu -->

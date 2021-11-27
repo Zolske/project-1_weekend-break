@@ -236,6 +236,8 @@ button is removed on wider view (.hide-desktop)*/
 /* small button size for mobile first */
 .button--mobile {
   width: 6rem;
+  height: 4.5rem;
+  margin-right: 2rem;
 }
 
 /* button hidden on mobile first */
@@ -287,7 +289,7 @@ footer i:hover {
 
 /* user occupation */
 .user-job {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin: 0;
   padding: 0.5rem;
 }
@@ -296,7 +298,7 @@ footer i:hover {
 .user-quote {
   font-size: 1.3rem;
   font-style: italic;
-  height: 14.5rem;
+  height: 18rem;
   margin: 1rem 12% 1rem 12%;
 }
 
@@ -396,6 +398,8 @@ footer {
 /* copy right */
 .copy {
   font-size: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 /* <<< end footer */
