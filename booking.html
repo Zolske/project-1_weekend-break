@@ -22,11 +22,11 @@
         <ul>
             <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
             <li>
-                <a href="index.html" aria-label="go to home page">
-                    <button class="button button--mobile hide-desktop float-left--mobile-first" title="go to home page">
+                <button class="button button--mobile hide-desktop float-left--mobile-first" title="go to home page">
+                    <a href="index.html" class="button__link" aria-label="go to home page">
                         <i class="fas fa-home"></i>
-                    </button>
-                </a>
+                    </a>
+                </button>
             </li>
             <li>
                 <!--"hamburger button": showHamburger(), JavaScript => dropdown_menu.js, toggles between showing & hiding "hamburger menu" -->
@@ -39,53 +39,55 @@
             <div class="hamburger_menu">
                 <!-- home button dose not appear on mobile first but when screen gets wider -->
                 <li class="float-left">
-                    <a href="index.html" aria-label="go to home page">
-                        <button class="button button--show-desktop" title="go to home page">
+                    <button class="button button--show-desktop" title="go to home page">
+                        <a href="index.html" class="button__link" aria-label="go to home page">
                             <i class="fas fa-home"></i> home
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
                 <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
                 <li class="float-right float-left">
-                    <a href="booking.html" aria-label="go to booking page">
-                        <button class="button" title="go to booking page">
+                    <button class="button" title="go to booking page">
+                        <a href="booking.html" class="button__link" aria-label="go to booking page">
                             <i class="fas fa-shopping-cart"></i> book
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
                 <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
                 <li class="float-right float-left">
-                    <a href="more_info.html" aria-label="go to package info page">
-                        <button class="button" title="go to package info page">
+                    <button class="button" title="go to package info page">
+                        <a href="more_info.html" class="button__link" aria-label="go to package info page">
                             <i class="fas fa-info"></i> package
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
                 <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
                 <li class="float-right">
-                    <a href="index.html#faq" aria-label="go to faq section on home page">
-                        <button class="button" onclick="detailsOpener_faq()" title="go to faq section on the home page">
+                    <button class="button" onclick="detailsOpener_faq()" title="go to faq section on the home page">
+                        <a href="index.html#faq" class="button__link" aria-label="go to faq section on home page">
                             <i class="far fa-question-circle"></i> faq
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
                 <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
                 <li class="float-right">
-                    <a href="index.html#about_us" aria-label="go to about_us section on home page">
-                        <button class="button" onclick="detailsOpener_about_us()"
-                            title="go to about us section on the home page">
+                    <button class="button" onclick="detailsOpener_about_us()"
+                        title="go to about us section on the home page">
+                        <a href="index.html#about_us" class="button__link"
+                            aria-label="go to about_us section on home page">
                             <i class="fas fa-user-tie"></i> about us
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
                 <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
                 <li class="float-right">
-                    <a href="index.html#contact_us" aria-label="go to contact_us section on home page">
-                        <button class="button" onclick="detailsOpener_contact_us()"
-                            title="go to contact section on the home page">
+                    <button class="button" onclick="detailsOpener_contact_us()"
+                        title="go to contact section on the home page">
+                        <a href="index.html#contact_us" class="button__link"
+                            aria-label="go to contact_us section on home page">
                             <i class="fas fa-address-book"></i> contact
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </li>
             </div>
         </ul>
