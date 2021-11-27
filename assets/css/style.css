@@ -83,6 +83,7 @@ to show menu, its position is define in this css rule-set */
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  padding: 0;
 }
 
 /* JavaScript => dropdown_menu, toggles between hiding and showing the "hamburger" menu,
@@ -91,6 +92,8 @@ click event showHamburger is triggered */
 .show {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 30rem;
 }
 
 /* home button to flow left on mobile first, background image can show behind,
@@ -244,10 +247,6 @@ button is removed on wider view (.hide-desktop)*/
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-}
-
-.button__link {
-  color: var(--color-button-text);
   text-decoration: none;
 }
 
@@ -570,6 +569,7 @@ td {
   /* shows element when screen expanse */
   .button--show-desktop {
     display: inline-block;
+    margin-top: 0;
   }
 
   /* changes nav bar elements to inline-block, they are not inside the hamburger any more */
@@ -586,9 +586,8 @@ td {
     box-shadow: none;
     background-color: transparent;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    /* margin-right: 2rem; */
+    margin-top: 1.5rem;
+    height: auto;
   }
 
   .hamburger_menu li {
