@@ -144,6 +144,9 @@ button is removed on wider view (.hide-desktop)*/
 .product-card__heading {
   height: 5rem;
   padding-top: 1rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  text-decoration: none;
 }
 
 #action_pack {
