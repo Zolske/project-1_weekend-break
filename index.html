@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!-- link to stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- link to form style sheet -->
+    <link href="assets/css/form.css" rel="stylesheet">
     <!-- add favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
     <meta name="description" content="The side offers weekend breaks. Every month there are three new breaks.">
@@ -92,7 +94,14 @@
             ...<br>action, relax and discovery.<br> Every moth the packages change, you can keep up to date by
             subscripting to the newsletter.
         </p>
-        <br>
+        <form method="POST" action="https://formdump.codeinstitute.net/" target="_blank" class="align-subscribe"
+            id="contact-form">
+            <label for="subscribe">Subscribe&nbsp;:</label>
+            <input type="text" class="subscribe" id="subscribe" name="subscribe"
+                placeholder=" enter your e-mail address">
+            <button type="submit" class="button">submit</button>
+        </form>
+        <hr>
     </header>
 
     <!-- >>> start main -->

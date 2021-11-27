@@ -177,6 +177,22 @@ button is removed on wider view (.hide-desktop)*/
   align-items: center;
 }
 
+/* aligns the subscribe labe, input and button */
+.align-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+  margin: auto;
+  background-color: #FFE45E80;
+  border-radius: 6rem;
+  padding: 2rem;
+}
+
+.subscribe {
+  margin: 1rem;
+}
+
 /* removes slides which will be displayed later (10seconds) through JavaScript 'shopping_gallery' */
 .mySlidesAction,
 .mySlidesRelax,
@@ -576,6 +592,12 @@ td {
   .float-left {
     float: left;
     margin-left: 1rem;
+  }
+
+  /* aligns the subscribe labe, input and button */
+  .align-subscribe {
+    flex-direction: row;
+    justify-content: center;
   }
 
   /* spaces cards horizontal even */
