@@ -20,8 +20,10 @@
 </head>
 
 <body>
-    <nav class="nav--bar">
-        <ul>
+
+    <!-- >>> start nav bar -->
+    <nav class="nav-bar">
+        <ul class="nav-bar__list">
             <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
             <li>
                 <a href="index.html" class="button button--mobile hide-desktop float-left--mobile-first"
@@ -38,7 +40,7 @@
             </li>
         </ul>
         <!-- "hamburger menu, styles are defined in css (display: none), JavaScript targets hamburger_menu[0] class to show, is trigger through click event on "hamburger button" -->
-        <ul class="hamburger_menu">
+        <ul class="nav-bar__hamburger nav-bar__list">
             <!-- home button dose not appear on mobile first but when screen gets wider -->
             <li class="float-left">
                 <a href="index.html" class="button button--show-desktop" title="go to home page"
@@ -82,21 +84,24 @@
             </li>
         </ul>
     </nav>
-    <header class="header-page">
+
+    <!-- >>> start header -->
+    <header class="header">
         <h1>The Weekend Breaker</h1>
-        <p id="intro-text">Welcome to the "weekend breaker". We offer weekend trip packages in three flavours
-            ...<br>action, relax and
-            discovery.<br> Every moth the packages change, you can keep up to date by subscripting to the newsletter.
+        <p class="header__intro">Welcome to the "weekend breaker". We offer weekend trip packages in three flavours
+            ...<br>action, relax and discovery.<br> Every moth the packages change, you can keep up to date by
+            subscripting to the newsletter.
         </p>
         <br>
     </header>
+
+    <!-- >>> start main -->
     <main>
         <!-- >>> start  card-->
         <article class="section">
             <h2>our monthly weekend packages&nbsp;:</h2>
-            <br>
             <section class="product-card">
-                <div id="action_pack">
+                <div class="section section--card">
                     <!-- there is no "top" class in css, its purpose is to group the heading & the image together
                         so that flex dose not put space in between -->
                     <div class="top">
@@ -199,7 +204,7 @@
                         training day, where a former sargent of the army will get you ready for the next days big jump.
                     </p>
                     <!-- grouped together in an class so flex treats them as one unit not individually -->
-                    <section class="product-card-button">
+                    <section class="product-card__button-align">
                         <a href="booking.html" class="button" title="go to booking page"
                             aria-label="go to booking page">
                             <i class="fas fa-shopping-cart"></i> book
@@ -216,7 +221,7 @@
                 </div>
 
                 <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
-                <div id="relax_pack">
+                <div class="section section--card">
                     <div class="top">
                         <h3 class="product-card__heading"><i class="fas fa-umbrella-beach"></i> relax pack</h3>
 
@@ -307,7 +312,7 @@
                     </div>
                     <p>This months relax weekend break has you relaxing in one of the worlds best spas. You will feel
                         reborn!!! Discover your inner self.</p>
-                    <section class="product-card-button">
+                    <section class="product-card__button-align">
                         <a href="booking.html" class="button" title="go to booking page"
                             aria-label="go to booking page">
                             <i class="fas fa-shopping-cart"></i> book
@@ -324,7 +329,7 @@
                 </div>
 
                 <!-- see "action pack" for explanation (is structured in the same way only content variates) -->
-                <div id="discover_pack">
+                <div class="section section--card">
                     <div class="top">
                         <h3 class="product-card__heading"><i class="fas fa-binoculars"></i> discover pack</h3>
 
@@ -416,7 +421,7 @@
                     </div>
                     <p>This months discovery weekend break takes you to Dublin. Visit the Guinness brewery (including
                         tasting &#128521;). Discover Dublin's night life and its past. </p>
-                    <section class="product-card-button">
+                    <section class="product-card__button-align">
                         <a href="booking.html" class="button" title="go to booking page"
                             aria-label="go to booking page">
                             <i class="fas fa-shopping-cart"></i> book
@@ -433,7 +438,8 @@
                 </div>
             </section>
         </article>
-        <!-- <<< end  -->
+        <!-- <<< end card -->
+
         <!-- >>> start testimony -->
         <article class="section">
             <h2>What our customers say&nbsp;:</h2>
@@ -456,148 +462,136 @@
                 </div>
                 <!-- defines the slide of the carousel -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <!-- user_1 -->
-                        <article class="user">
-                            <header>
-                                <!-- user image -->
-                                <img src="assets/images/face_users/man_1.webp" alt="profile picture of Chris Fox"
-                                    loading="lazy">
-                                <div>
-                                    <!-- user name -->
-                                    <h3>Chris Fox.</h3>
-                                    <!-- user occupation -->
-                                    <p class="user-job">CEO at Mighty Schools.</p>
-                                    <!-- start rating the class "checked" gives color to the star -->
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-                            </header>
-                            <!-- user quote/comment -->
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I really liked the
-                                service which was provided by the "weekend breaker". Unfortunately, we where unlucky
-                                with our flight to the destination, which was delayed. The "action package" is a
-                                must if you are looking for an exciting break. Highly recommended!
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <!-- user_1 -->
+                    <article class="carousel-item active">
+                        <header class="user-header">
+                            <!-- user image -->
+                            <img src="assets/images/face_users/man_1.webp" class="user-img"
+                                alt="profile picture of Chris Fox" loading="lazy">
+                            <div>
+                                <!-- user name -->
+                                <p class="user-name">Chris Fox.</p>
+                                <!-- user occupation -->
+                                <p class="user-job">CEO at Mighty Schools.</p>
+                                <!-- start rating the class "checked" gives color to the star -->
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </header>
+                        <!-- user quote/comment -->
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I really liked the
+                            service which was provided by the "weekend breaker". Unfortunately, we where unlucky
+                            with our flight to the destination, which was delayed. The "action package" is a
+                            must if you are looking for an exciting break. Highly recommended!
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                     <!-- user_2 -->
-                    <div class="carousel-item">
-                        <article class="user">
-                            <header>
-                                <img src="assets/images/face_users/women_1.webp" alt="profile picture of Lisa Hudiny"
-                                    loading="lazy">
-                                <div>
-                                    <h3>Lisa Hudiny.</h3>
-                                    <p class="user-job">head chef.</p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-                            </header>
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I really needed
-                                the time off from
-                                work, to forget everything and just relax somewhere different. Thank you so much
-                                "Weekend breaker" team, I had a great time!!!
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <article class="carousel-item">
+                        <header class="user-header">
+                            <img src="assets/images/face_users/women_1.webp" class="user-img"
+                                alt="profile picture of Lisa Hudiny" loading="lazy">
+                            <div>
+                                <p class="user-name">Lisa Hudiny.</p>
+                                <p class="user-job">head chef.</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </header>
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I really needed
+                            the time off from
+                            work, to forget everything and just relax somewhere different. Thank you so much
+                            "Weekend breaker" team, I had a great time!!!
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                     <!-- user_3 -->
-                    <div class="carousel-item">
-                        <article class="user">
-                            <header>
-                                <img src="assets/images/face_users/women_2.webp" alt="profile picture of Gabriel Sanche"
-                                    loading="lazy">
-                                <div>
-                                    <h3>Gabriel Sanche.</h3>
-                                    <p class="user-job">student.</p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </header>
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;The package is put
-                                together really
-                                well. I learned a lot on my trip and I can not wait for next months new offers.
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <article class="carousel-item">
+                        <header class="user-header">
+                            <img src="assets/images/face_users/women_2.webp" class="user-img"
+                                alt="profile picture of Gabriel Sanche" loading="lazy">
+                            <div>
+                                <p class="user-name">Gabriel Sanche.</p>
+                                <p class="user-job">student.</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </header>
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;The package is put
+                            together really
+                            well. I learned a lot on my trip and I can not wait for next months new offers.
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                     <!-- user_4 -->
-                    <div class="carousel-item">
-                        <article class="user">
-                            <header>
-                                <img src="assets/images/face_users/man_2.webp" alt="profile picture of John Doe"
-                                    loading="lazy">
-                                <div>
-                                    <h3>John Doe.</h3>
-                                    <p class="user-job">accountant.</p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </header>
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I had the best
-                                time of my life !!! I
-                                recommend everyone to take a break from what you are doing and just get out for a
-                                few days and do something new, see something new. Just life.
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <article class="carousel-item">
+                        <header class="user-header">
+                            <img src="assets/images/face_users/man_2.webp" class="user-img"
+                                alt="profile picture of John Doe" loading="lazy">
+                            <div>
+                                <p class="user-name">John Doe.</p>
+                                <p class="user-job">accountant.</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </header>
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I had the best
+                            time of my life !!! I
+                            recommend everyone to take a break from what you are doing and just get out for a
+                            few days and do something new, see something new. Just life.
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                     <!-- user_5 -->
-                    <div class="carousel-item">
-                        <article class="user">
-                            <header>
-                                <img src="assets/images/face_users/man_3.webp" alt="profile picture of Peter Griffin"
-                                    loading="lazy">
-                                <div>
-                                    <h3>Peter Griffin.</h3>
-                                    <p class="user-job">actor.</p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                </div>
-                            </header>
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I did the
-                                discovery tour. And I
-                                really discovered something. Life is to short. The "weekend breaker" is the answer
-                                to make the most out of your time. Just book, everything is taken care of, I wish I
-                                would have known.
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <article class="carousel-item">
+                        <header class="user-header">
+                            <img src="assets/images/face_users/man_3.webp" class="user-img"
+                                alt="profile picture of Peter Griffin" loading="lazy">
+                            <div>
+                                <p class="user-name">Peter Griffin.</p>
+                                <p class="user-job">actor.</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </header>
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I did the
+                            discovery tour. And I
+                            really discovered something. Life is to short. The "weekend breaker" is the answer
+                            to make the most out of your time. Just book, everything is taken care of, I wish I
+                            would have known.
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                     <!-- user_6 -->
-                    <div class="carousel-item">
-                        <article class="user">
-                            <header>
-                                <img src="assets/images/face_users/lego_3.webp" alt="profile picture of Sam Ladovsky"
-                                    loading="lazy">
-                                <div>
-                                    <h3>Sam Ladovsky.</h3>
-                                    <p class="user-job">driver.</p>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star"></span>
-                                </div>
-                            </header>
-                            <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;Nice to have
-                                everything been taken
-                                care off. Finally a travel agency which is worth every penny.
-                                &nbsp;<i class="fas fa-quote-right"></i></blockquote>
-                        </article>
-                    </div>
+                    <article class="carousel-item">
+                        <header class="user-header">
+                            <img src="assets/images/face_users/lego_3.webp" class="user-img"
+                                alt="profile picture of Sam Ladovsky" loading="lazy">
+                            <div>
+                                <p class="user-name">Sam Ladovsky.</p>
+                                <p class="user-job">driver.</p>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </header>
+                        <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;Nice to have
+                            everything been taken
+                            care off. Finally a travel agency which is worth every penny.
+                            &nbsp;<i class="fas fa-quote-right"></i></blockquote>
+                    </article>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">
@@ -612,8 +606,10 @@
             </div>
         </article>
         <!-- <<< end testimony -->
+
         <!-- >>> start faq -->
-        <article class="section faq">
+        <article class="section">
+            <!-- id is needed to link to it and set <details> attribute to open through dropdown_menu.js -->
             <details id="faq">
                 <summary>
                     <h2><i class="far fa-question-circle"></i> faq</h2>
@@ -624,7 +620,7 @@
                         <h3>Can I bring my pet?</h3>
                     </summary>
                     <!-- faq answer -->
-                    <p class="profile-text">
+                    <p class="answer-faq">
                         You can bring your pet on the "relax pack" and "discovery pack" tour. But we do not recommend to
                         bring any animals to the "action pack" tour.
                     </p>
@@ -633,7 +629,7 @@
                     <summary>
                         <h3>Can I cancel my trip?</h3>
                     </summary>
-                    <p class="profile-text">
+                    <p class="answer-faq">
                         We understand that plans can change. You get a full refound, if you can give us 1 week
                         notice.
                     </p>
@@ -642,15 +638,17 @@
                     <summary>
                         <h3>How can I stay up to date?</h3>
                     </summary>
-                    <p class="profile-text">
+                    <p class="answer-faq">
                         You can subscribe to our news letter. We than keep you posted.
                     </p>
                 </details>
             </details>
         </article>
         <!-- <<< end faq -->
+
         <!-- >>> start about us -->
-        <article class="section about_us">
+        <article class="section">
+            <!-- id is needed to link to it and set <details> attribute to open through dropdown_menu.js -->
             <details id="about_us">
                 <summary>
                     <h2><i class="fas fa-user-tie"></i> about us</h2>
@@ -658,20 +656,20 @@
                 <h3>about me :</h3>
                 <section class="profile-text">
                     <!-- profile image of the owner -->
-                    <img class="profile_me" src="assets/images/profile_me/profile_me_1.webp"
+                    <img class="profile-me" src="assets/images/profile_me/profile_me_1.webp"
                         alt="profile picture of the websites owner" loading="lazy">
                     <!-- owner description -->
-                    <p>Hello, my name is Zoltán Kepes and I am the owner of the "Weekend Breaker". I hope you will enjoy
-                        our
-                        weekend packages and get the adventure or rest you are looking for. Because ...<br>
-                        <em>You deserve it!</em>
+                    <p class="clear-float-after">Hello, my name is Zoltán Kepes and I am the owner of the "Weekend
+                        Breaker". I hope you will enjoy
+                        our weekend packages and get the adventure or rest you are looking for. Because ...<br>
+                        <em class="slogan">You deserve it!</em>
                     </p>
                 </section>
                 <h3>meet the team :</h3>
                 <section class="profile-text">
                     <!-- image of the team -->
                     <!-- Image Map Generated by http://www.image-map.net/ -->
-                    <img class="profile_team" src="assets/images/jason-goodman-fznQW-kn5VU-unsplash_small.webp"
+                    <img class="profile-team" src="assets/images/jason-goodman-fznQW-kn5VU-unsplash_small.webp"
                         alt="one of the team members is sitting in front of a computer while the other one is standing next to him"
                         usemap="#image-map" loading="lazy">
                     <!-- the image has been "mapped", when the user hovers over the mapped part the "title" shows  -->
@@ -692,26 +690,37 @@
             </details>
         </article>
         <!-- <<< end about us -->
+
         <!-- >>> start contact us -->
         <section class="section">
+            <!-- id is needed to link to it and set <details> attribute to open through dropdown_menu.js -->
             <details id="contact_us">
                 <summary>
                     <h2><i class="fas fa-address-book"></i> contact us</h2>
                 </summary>
                 <h3>find and contact us:</h3>
-                <ul class="contact">
-                    <li><i class="fas fa-phone-square-alt"></i> call us:<ul>
+                <ul class="contact-heading">
+                    <li><i class="fas fa-phone-square-alt"></i> call us:
+                        <ul>
                             <!-- opens user phone app -->
-                            <li><a href="tel:+123456789">+123456789</a></li>
+                            <li class="contact-text">
+                                <a href="tel:+123456789">+123456789</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><i class="fas fa-at"></i> email us:<ul>
+                    <li><i class="fas fa-at"></i> email us:
+                        <ul>
                             <!-- opens user email app -->
-                            <li><a href="mailto:zoltan.the.kepes@gmail.com">zoltan.the.kepes@gmail.com</a></li>
+                            <li class="contact-text">
+                                <a href="mailto:zoltan.the.kepes@gmail.com">zoltan.the.kepes@gmail.com</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><i class="fas fa-map-marked-alt"></i> address:<ul>
-                            <li>Parchmore Road<br>Thorthon Heath<br>London<br>CR7 8LU</li>
+                    <li><i class="fas fa-map-marked-alt"></i> address:
+                        <ul>
+                            <li class="contact-text">
+                                Parchmore Road<br>Thorthon Heath<br>London<br>CR7 8LU
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -719,8 +728,10 @@
         </section>
         <!-- <<< end contact us -->
     </main>
+
+    <!-- >>> start footer -->
     <footer>
-        <section class="socialmedia">
+        <section class="social-media">
             <!-- links to social media -->
             <a href="https://www.facebook.com/" target="_blank" aria-label="go to our facebook page (opens new tab)"
                 title="go to our facebook page">
@@ -739,6 +750,7 @@
             <p>"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights reserved</p>
         </section>
     </footer>
+    <!-- >>> end footer -->
 
     <!-- connection to "Font Awesome" -->
     <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>

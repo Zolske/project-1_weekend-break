@@ -1,11 +1,11 @@
 /* color palette #eb6424 #067bc2 #e3f2fd #ffe45e #b68cB8*/
 :root {
-  --color-headings: #EB6424;
-  --color-text: #067BC2;
-  --color-text-secondary: #000;
   --color-button: #EB6424;
-  --color-button-text: #E3F2FD;
   --color-button-selected: #B68CB8;
+  --color-button-text: #E3F2FD;
+  --color-headings: #EB6424;
+  --color-text-secondary: #000;
+  --color-text: #067BC2;
 }
 
 html {
@@ -15,79 +15,77 @@ html {
 
 /* default font, color, size, alignment */
 body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: rgb(235, 100, 36);
+  background: linear-gradient(180deg, rgba(235, 100, 36, 1) 16%, rgba(255, 228, 94, 1) 100%);
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  color: var(--color-text);
-  background: rgb(235, 100, 36);
-  background: linear-gradient(180deg, rgba(235, 100, 36, 1) 16%, rgba(255, 228, 94, 1) 100%);
 }
 
 h1,
 h2,
 h3 {
   color: var(--color-headings);
-  margin-top: 1rem;
 }
 
 h1 {
   font-size: 3.5rem;
-  margin-top: -1rem;
-  padding-top: 6.5rem;
-  margin-bottom: 0.5rem;
+  margin: -1rem 0 0 0;
+  padding-top: 7rem;
 }
 
 h2 {
   font-size: 2.4rem;
-  text-transform: capitalize;
   font-variant: small-caps;
+  text-transform: capitalize;
 }
 
 h3 {
   font-size: 1.8rem;
-  letter-spacing: 0.1rem;
   font-style: italic;
-  text-decoration: underline;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
   text-decoration-style: double;
+  text-decoration: underline;
 }
 
 p {
-  margin: 2rem;
-  padding: 1rem;
   color: var(--color-text);
+  margin: 2rem 5%;
+  width: 90%;
 }
 
 /* >>> start nav bar */
-/* makes navbar element stick and positions it */
-.nav--bar {
+/* makes navbar element stick to parent (body) and positions it */
+.nav-bar {
   position: -webkit-sticky;
   position: sticky;
-  top: 1px;
+  top: 0;
   z-index: 10;
 }
 
 /* remove bullets from list elements in nav bar */
-.nav--bar ul {
+.nav-bar__list {
   list-style: none;
-  margin-right: 1rem;
 }
 
 /* removes the "hamburger" menu", click event showHamburger triggers JavaScript "dropdown_menu"
 to show menu, its position is define in this css rule-set */
-.hamburger_menu {
-  display: none;
-  position: absolute;
-  top: 5rem;
-  right: 1rem;
-  overflow: auto;
+.nav-bar__hamburger {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  display: none;
+  overflow: auto;
   padding: 0;
+  position: absolute;
+  right: 1rem;
+  top: 5rem;
+  z-index: 2;
 }
 
 /* JavaScript => dropdown_menu, toggles between hiding and showing the "hamburger" menu,
-rules which are defined hire will be applied to the hamburger_menu rule set when
+rules which are defined hire will be applied to the nav-bar__hamburger rule set when
 click event showHamburger is triggered */
 .show {
   display: flex;
@@ -109,39 +107,43 @@ button is removed on wider view (.hide-desktop)*/
 
 /* <<< end nav bar */
 
+/* >>> start header */
 /* 1st value is logo, 2nd value is background, if values not separated by "," than they apply to both*/
-.header-page {
-  background-color: #fff;
+.header {
+  background-color: var(--color-button-text);
   background-image: url(../images/icons/weekend-breaker_logo_icon.png), url(../images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
   background-position: center top 2rem, center;
-  background-size: 6rem, cover;
   background-repeat: no-repeat;
-  /* border-bottom: 2rem solid var(--color-headings); */
+  background-size: 6rem, cover;
 }
 
-#intro-text {
+/* styles the introductory text */
+.header__intro {
   color: var(--color-text);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
   background-color: #FFE45E80;
   border-radius: 6rem;
-  width: 80%;
-  margin-left: 10%;
   padding: 2rem;
 }
 
+/* <<< end header */
+
+/* >>> start main */
 /* styles the sections of the page */
 .section {
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
-  max-width: 90%;
-  margin: 3rem 5%;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
   background: rgb(227, 242, 253);
   background: linear-gradient(180deg, rgba(227, 242, 253, 1) 16%, rgba(255, 228, 94, 1) 100%);
+  border-radius: 1rem;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+  margin: 2rem 5%;
+  max-width: 90%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.section--card {
+  background: radial-gradient(circle, rgba(227, 242, 253, 1) 16%, rgba(255, 228, 94, 1) 100%);
 }
 
 .product-card__heading {
@@ -152,25 +154,7 @@ button is removed on wider view (.hide-desktop)*/
   text-decoration: none;
 }
 
-#action_pack {
-  border-radius: 1rem;
-  background: rgb(227, 242, 253);
-  background: radial-gradient(circle, rgba(227, 242, 253, 1) 16%, rgba(255, 228, 94, 1) 100%);
-}
-
-#relax_pack {
-  border-radius: 1rem;
-  background: rgb(227, 242, 253);
-  background: radial-gradient(circle, rgba(227, 242, 253, 1) 16%, rgba(255, 228, 94, 1) 100%);
-}
-
-#discover_pack {
-  border-radius: 1rem;
-  background: rgb(227, 242, 253);
-  background: radial-gradient(circle, rgba(227, 242, 253, 1) 16%, rgba(255, 228, 94, 1) 100%);
-}
-
-/* aligns (centers) the image of the product caed */
+/* aligns (centers) the image of the product card */
 .product-card__img img {
   width: 95%;
   margin: auto;
@@ -185,14 +169,19 @@ button is removed on wider view (.hide-desktop)*/
   margin: auto;
 }
 
+/* arranges buttons in the product card */
+.product-card__button-align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* removes slides which will be displayed later (10seconds) through JavaScript 'shopping_gallery' */
 .mySlidesAction,
 .mySlidesRelax,
 .mySlidesDiscover {
   position: relative;
 }
-
-/* <<< end card */
 
 /* >>> start Fading animation */
 .fade {
@@ -222,14 +211,8 @@ button is removed on wider view (.hide-desktop)*/
   }
 }
 
-/* arranges buttons in the product card */
-.product-card-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* <<< end  Fading animation */
+/* <<< end Fading animation */
+/* <<< end card */
 
 /* >>> start button and menu*/
 .button {
@@ -260,55 +243,46 @@ button is removed on wider view (.hide-desktop)*/
   display: none;
 }
 
-/* feedback to user that the element is a button
-because it changes color when hovered and pressed */
+/* feedback to user that the element is a button */
 .button:hover,
 .button:focus {
   background: var(--color-button-selected);
 }
 
-/* feedback to user that the element is a link
-because it changes color when hovered*/
+/* feedback to user that the element is a link */
 footer i:hover {
   color: var(--color-button-selected);
 }
 
 /* <<< end button and menu */
 
-/* style heading for summary*/
-summary h2,
-summary h3 {
-  display: inline-block;
-}
-
 /* >>> start user rating testimonies */
-
 /* gives color to positive user rated star */
 .checked {
   color: orange;
 }
 
 /* groups user image with user name, occupation and rating together */
-.user header {
-  width: 90%;
-  margin-left: 5%;
+.user-header {
   display: flex;
   justify-content: space-evenly;
+  margin-left: 5%;
+  width: 90%;
 }
 
 /* defines the same size for all user images */
-.user img {
-  display: inline-block;
+.user-img {
   border-radius: 50%;
-  width: 6rem;
+  display: inline-block;
   height: 6rem;
   margin: 1rem 1rem;
+  width: 6rem;
 }
 
 /* name of the user */
-.user h3 {
-  margin-bottom: 0.1rem;
+.user-name {
   font-size: 1.8rem;
+  margin-bottom: 0.1rem;
 }
 
 /* user occupation */
@@ -320,49 +294,57 @@ summary h3 {
 
 /* user quote */
 .user-quote {
-  font-style: italic;
   font-size: 1.3rem;
-  margin: 1rem 12% 1rem 12%;
+  font-style: italic;
   height: 14.5rem;
+  margin: 1rem 12% 1rem 12%;
 }
 
 /* <<< end user rating testimonies */
 
-/* styles faq text */
-.faq p {
+/* >>> start faq */
+/* style heading for summary*/
+summary h2,
+summary h3 {
+  display: inline-block;
+}
+
+.answer-faq {
   font-style: italic;
 }
+
+/* >> end faq */
 
 /* >>> start about us */
 /* groups the profile picture and the text together */
 .profile-text {
-  width: 80%;
   margin-left: 10%;
+  width: 80%;
 }
 
 /* defines the size of the owners profile picture */
-.profile_me {
-  height: 10rem;
-  width: auto;
+.profile-me {
   border-radius: 50%;
   float: left;
+  height: 10rem;
   margin: 2rem 2rem 1rem 0;
+  width: auto;
 }
 
 /* clears the float after the p element */
-.about_us p:after {
+.clear-float-after:after {
   content: "";
   clear: both;
   display: table;
 }
 
 /* emphasizes the slogan */
-.about_us em {
+.slogan {
   font-weight: bolder;
 }
 
 /* profile picture of the team */
-.profile_team {
+.profile-team {
   margin: 2rem 2rem 1rem 0;
   border-radius: 10%;
   float: left;
@@ -371,14 +353,14 @@ summary h3 {
 /* <<< end about us */
 
 /* >>> start contact us */
-.contact>li {
+.contact-heading {
   font-weight: bolder;
   font-size: 2.2rem;
   list-style-type: none;
 }
 
 /* styles list items for contact */
-.contact>li>ul>li {
+.contact-text {
   font-style: italic;
   font-weight: normal;
   font-size: 1.4rem;
@@ -387,8 +369,16 @@ summary h3 {
 
 /* >>> end contact us */
 
+/* >>> start footer */
+footer {
+  background-color: white;
+  background-image: url(../images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
+  background-size: cover;
+  margin: 1rem 0 0 0;
+}
+
 /* >>> start social media */
-.socialmedia {
+.social-media {
   padding-top: 2rem;
   margin: 2rem 0;
   font-size: 6rem;
@@ -397,7 +387,7 @@ summary h3 {
 }
 
 /* color for social media icons */
-.socialmedia i {
+.social-media i {
   color: var(--color-headings);
 }
 
@@ -408,31 +398,16 @@ summary h3 {
   font-size: 1rem;
 }
 
-/* >>> start footer */
-footer {
-  background-color: white;
-  background-image: url(../images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
-  background-size: cover;
-  margin: 1rem 0 0 0;
-}
-
-footer p {
-  margin-bottom: 0;
-}
-
 /* <<< end footer */
 
-/* <<< end social media links */
-
 /* >>> start more_info page */
-
 .include-all {
   margin: auto;
   width: fit-content;
   text-align: left;
 }
 
-.new-icon {
+.new-bullet {
   list-style: url(../images/icons/thumbs-up-icon-24.png);
 }
 
@@ -516,14 +491,14 @@ td {
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
 /* at 400px == font size standard 16px == 25em */
-@media screen and (min-width: 25em) {
+/* @media screen and (min-width: 25em) { */
 
-  /* testimony, group user image with name, occupation tighter together */
-  .user header {
+/* testimony, group user image with name, occupation tighter together */
+/* .user-header {
     width: 60%;
     margin-left: 20%;
   }
-}
+} */
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
@@ -557,7 +532,7 @@ td {
     font-size: 2.8rem;
   }
 
-  #intro-text {
+  .header__intro {
     font-size: 2rem;
   }
 
@@ -573,7 +548,7 @@ td {
   }
 
   /* changes nav bar elements to inline-block, they are not inside the hamburger any more */
-  .hamburger_menu {
+  .nav-bar__hamburger {
     /* is needed otherwise elements do not appear */
     display: inline-block;
     /* is needed otherwise background dose not float behind navbar */
@@ -590,17 +565,17 @@ td {
     height: auto;
   }
 
-  .hamburger_menu li {
+  .nav-bar__hamburger li {
     display: inline-block;
     margin: 0.5rem;
   }
 
-  .hamburger_menu li:first-child {
+  .nav-bar__hamburger li:first-child {
     display: inline-block;
     margin-left: 0rem;
   }
 
-  .hamburger_menu .button {
+  .nav-bar__hamburger .button {
     width: auto;
     font-size: 1.3rem;
     /* margin: auto; */
@@ -654,7 +629,7 @@ td {
   }
 
   /* testimony, group user image with name, occupation tighter together */
-  .user header {
+  .user-header {
     width: 40%;
     margin-left: 30%;
   }
@@ -726,12 +701,12 @@ td {
 /* breakpoint for desktop 3 column at 720px == font size standard 16px == 45em */
 @media screen and (min-width: 45em) {
 
-  .hamburger_menu {
+  .nav-bar__hamburger {
     width: 90%;
     margin-left: 5%;
   }
 
-  .hamburger_menu .button {
+  .nav-bar__hamburger .button {
     font-size: 1.6rem;
   }
 
@@ -763,7 +738,7 @@ td {
   }
 
 
-  #intro-text {
+  .header__intro {
     width: fit-content;
     margin: auto;
   }
