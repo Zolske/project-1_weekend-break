@@ -107,6 +107,60 @@
     background-size: 100%;
 }
 
+/* >>> start discover dublin */
+.dublin-castle,
+.dublin-castles-from-above,
+.dublin-man-playing-guitar,
+.dublin-o-connell-street-spike,
+.dublin-red-pub,
+.dublin-ship-on-river-bank,
+.dublin-whisky-barrel,
+.dublin-woman-walkin-in-street {
+    max-width: 100%;
+    background-size: 100%;
+    background-image: url('../images/sprites/sprite-discover-dublin.jpg');
+}
+
+.dublin-castle {
+    background-position: 0 0%;
+    background-size: 100%;
+}
+
+.dublin-castles-from-above {
+    background-position: 0 17.532971%;
+    background-size: 100%;
+}
+
+.dublin-man-playing-guitar {
+    background-position: 0 32.727991%;
+    background-size: 100%;
+}
+
+.dublin-o-connell-street-spike {
+    background-position: 0 49.980024%;
+    background-size: 100%;
+}
+
+.dublin-red-pub {
+    background-position: 0 61.725263%;
+    background-size: 100%;
+}
+
+.dublin-ship-on-river-bank {
+    background-position: 0 67.55603%;
+    background-size: 100%;
+}
+
+.dublin-whisky-barrel {
+    background-position: 0 84.421488%;
+    background-size: 100%;
+}
+
+.dublin-woman-walkin-in-street {
+    background-position: 0 100%;
+    background-size: 100%;
+}
+
 .row {
     display: -ms-flexbox;
     /* IE10 */
@@ -136,6 +190,10 @@
     display: none;
 }
 
+h3 {
+    margin-top: 3rem;
+}
+
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
 /* at 600px == font size standard 16px == 37.5em */
@@ -149,6 +207,12 @@
     /* Create four equal columns that sits next to each other */
     .desktop-view {
         display: inline-block
+    }
+
+    .row,
+    p {
+        width: 80%;
+        margin: auto;
     }
 
     .column {

@@ -454,7 +454,7 @@ td {
 }
 
 th {
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
 td {
@@ -673,7 +673,7 @@ td {
   th,
   td {
     font-size: 2rem;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 
   @-webkit-keyframes flash {
