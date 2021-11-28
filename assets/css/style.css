@@ -669,11 +669,14 @@ td {
     font-size: 1.5rem;
   }
 
-  tr,
   th,
   td {
     font-size: 2rem;
     padding: 0 2rem;
+  }
+
+  td {
+    padding: 2rem;
   }
 
   @-webkit-keyframes flash {
@@ -738,7 +741,8 @@ td {
   }
 
   /* changes table size on wider screens */
-  table {
+  table,
+  p {
     width: 80%;
     margin-left: 10%;
   }
