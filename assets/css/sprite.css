@@ -216,15 +216,16 @@
     -ms-flex-wrap: wrap;
     /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;
+    /* padding: 0 40px; */
+    justify-content: space-evenly;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
-    -ms-flex: 25%;
+    -ms-flex: 23%;
     /* IE10 */
-    flex: 25%;
-    max-width: 25%;
+    flex: 23%;
+    max-width: 23%;
     padding: 0 4px;
 }
 
@@ -257,16 +258,11 @@ h3 {
         display: inline-block
     }
 
-    .row {
-        width: 80%;
-        margin: auto;
-    }
-
     .column {
-        -ms-flex: 12.5%;
+        -ms-flex: 11.5%;
         /* IE10 */
-        flex: 12.5%;
-        max-width: 12.5%;
+        flex: 11.5%;
+        max-width: 11.5%;
         padding: 0 4px;
     }
 }
