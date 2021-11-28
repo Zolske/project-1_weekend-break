@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!-- link to stylesheet -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- lunk to sprite stylesheet -->
+    <link href="assets/css/sprite.css" rel="stylesheet">
     <!-- add favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
     <meta name="description"
@@ -85,12 +87,15 @@
         </ul>
     </nav>
 
+    <!-- >>> start header -->
     <header class="header">
         <h1>This months packages.</h1>
         <p id="header__intro">Find out more about this months packages.
         </p>
         <br>
     </header>
+
+    <!-- >>> start main -->
     <main>
         <article class="section">
             <h3>included in all packages</h3>
@@ -102,14 +107,154 @@
             <!-- action pack -->
             <article class="section">
                 <h2><i class="fas fa-snowboarding"></i> action pack</h2>
-                <picture class="pack-image">
-                    <source media="(min-width:63.75em)" srcset="assets/images/medium/action_medium.gif"
-                        type="image/gif">
-                    <source media="(min-width:0.5em)" srcset="assets/images/small/action_small.gif" type="image/gif">
-                    <img src="assets/images/small/small-action_pack_03-mario_majer-unsplash.jpg"
-                        alt="a skydiver diving through the sunset sky">
-                </picture>
-                <!-- <img class="pack-image" src="assets/images/small/action_small.gif" alt="people skydiving"> -->
+
+                <!-- images for action pack -->
+                <div class="row">
+                    <div class="column">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                    </div>
+                    <div class="column">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                    </div>
+                    <div class="column">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                    </div>
+                    <div class="column">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                    </div>
+                    <div class="column desktop-view">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                    </div>
+                    <div class="column desktop-view">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                    </div>
+                    <div class="column desktop-view">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                    </div>
+                    <div class="column desktop-view">
+                        <img class="parachuteparachute-two-again desktop-view" alt="two skydiver jumping backwards"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-airplane" alt="airplane on the ground"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADEAQMAAAAf045tAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAeDcd3AABNp8FrQAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-coming-down" alt="skydiver parachuting with an green parachute"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-evening" alt="skydiver parachuting in the sunset"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAHCAQMAAABv/WbEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACdJREFUeNrtwQENAAAAwqD3T+3sARQAAAAAAAAAAAAAAAAAAAAAwA1EjgAB1pWVVwAAAABJRU5ErkJggg==">
+                        <img class="parachuteparachute-happy" alt="a skydiver hugging another skydiver"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAF3AQMAAAAl+uQCAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACVJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAAAAAM4MOSEAAfTn5L4AAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-jumper desktop-view" alt="skydiver falling towards earth"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADhAQMAAABIshroAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB1JREFUeNrtwQEBAAAAgJD+r+4ICgAAAAAAAAAAGiJHAAHrw0NSAAAAAElFTkSuQmCC">
+                        <img class="parachuteparachute-landed desktop-view" alt="two skydiver landed and smiling"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwTEBAAAAwqD1T20KP6AAAAAAAAAAAAAAAHgZLbQAAQGVUwQAAAAASUVORK5CYII=">
+                        <img class="parachuteparachute-legs desktop-view" alt="the legs of an skydiver in the air"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADIAQMAAABoEU4WAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20Hb6AAAAAAAAAA4DceeAABveM0HgAAAABJRU5ErkJggg==">
+                    </div>
+                </div>
                 <h3>what you get :</h3>
                 <!-- source https://www.virginexperiencedays.co.uk/parachute-jump -->
                 <p class="profile-text">Get ready to tick off an epic bucket list experience. Your next adventure is
@@ -170,6 +315,7 @@
                     </a>
                 </section>
             </article>
+
             <!-- relax pack -->
             <article class="section">
                 <h2><i class="fas fa-umbrella-beach"></i> relax pack</h2>
