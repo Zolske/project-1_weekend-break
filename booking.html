@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add bootstrap 5.0.2 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- sets different browser styles to basic -->
     <link rel="stylesheet" href="assets/css/normalize.css">
     <!-- link to stylesheet -->
@@ -97,7 +99,7 @@
             ...<br>action, relax and discovery.<br> Every moth the packages change, you can keep up to date by
             subscripting to the newsletter.
         </p>
-        <br>
+        <hr>
     </header>
 
     <!-- >>> start main -->
@@ -116,11 +118,13 @@
                     <input type="email" id="email" name="email" placeholder=" your email" size="12" required>
                     <hr>
                     <label for="subscribe_tick">Subscribe to newsletter</label>
-                    <input type="radio" id="subscribe_tick" name="subscribe">
+                    <div class="element-size">
+                        <input type="checkbox" id="subscribe_tick" name="subscribe">
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>your package</legend>
-                    <label for="weekend_pack">Weekend Package</label>
+                    <label for="weekend_pack">Weekend Package</label><br>
                     <select name="weekend_pack" id="weekend_pack" required>
                         <option disabled selected value> -- select an option -- </option>
                         <optgroup label="Action Package">
@@ -134,26 +138,27 @@
                         </optgroup>
                     </select>
                     <hr>
-                    <label for="guests">Guests (max 7)</label>
+                    <label for="guests">Guests (max 7) *</label><br>
                     <input type="number" id="guests" name="guests" min="0" max="7" value="0">
                     <p class="note">* If you request a package for more than 8 people, please do not hesitate to contact
                         with us.</p>
                     <hr>
-                    <label for="date">Select Week * </label>
+                    <label for="date">Select Week * </label><br>
                     <input type="week" id="date" name="date">
-                    <p class="note">* The week in which the weekend falls
-                        with the package (Saturday to Sunday).</p>
+                    <p class="note">* The week in which the weekend falls with the package (Saturday to Sunday).</p>
                 </fieldset>
                 <hr>
-                <label for="comment">Comment<br>&nbsp;</label>
-                <textarea id="comment" name="comment" row="4" cols="24"
+                <label for="comment">Comment</label><br>
+                <textarea id="comment" name="comment" row="8" cols="40"
                     placeholder=" your comments or requests"></textarea>
                 <p class="note">* Please, let us know if you suffer from any allergies or if you have any other
                     requirements (e.g. vegetarian).
                 </p>
                 <hr>
                 <label for="terms">Accept terms and conditions</label>
-                <input type="radio" id="terms" name="terms" required>
+                <div class="element-size">
+                    <input type="checkbox" id="terms" name="terms" required>
+                </div>
                 <hr>
                 <button type="submit" class="button">submit</button>
             </form>
@@ -178,10 +183,8 @@
                 <i class="fab fa-instagram-square"></i>
             </a>
         </div>
-        <div>
-            <p class="copy">"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights
-                reserved</p>
-        </div>
+        <p class="copy">"Weekend Breaker"&reg; is a Registered Trademark @ Zoltán Kepes<br>&copy; All rights
+            reserved</p>
     </footer>
     <!-- >>> end footer -->
 
