@@ -1,16 +1,29 @@
-<img src="assets/images/doc/weekend-breaker_logo.png" alt="company logo, a drawing of a sun, a palm and the sea">
+# The Weekend breaker
 
-# Weekend breaker
+The website offers 3 different weekend break packages for the user to choose from. The packages change every month.
 
-The website offers 3 different weekend break packages for the user to choose from. We take care of the accommodation and plan the activity's. Every month there are 3 new packages.
+The site targets users who need a break from work and want to get away for a weekend to recharge.
 
-The user is through a discount, encouraged to subscribe and can be kept up-to-date with new and exciting trips. To create a sense of community, the user can upload and share his experience to the side.
+<img src="assets/images/doc/weekend-breaker-website-mockup.webp">
 
+*the mockup shows the side in different sizes ( [techsini.com](http://techsini.com/multi-mockup/index.php "opens a new page (in a new tab) to techsini") )*
 <hr>
 
 ## Features
-- The **navigation bar**
-    - Is easy to navigate, because the navbar sticks to the top, contains easy to recognize icons and has the same layout on all 8 pages.
+- **navigation bar**
+    ![nav bar](assets/images/doc/nav-bar.gif)
+    - uses intuitive icons
+    - hover effect changes font color and shows hint
+    - "hamburger" menu expanse when there is enough width
+    - moves with the page down
+    - unique design *(buttons float over the page)*
+- **mobile first** design
+    ![nav bar](assets/images/doc/column-1-2-3.gif)
+    - images are loaded according to screen width  
+    *(saves download time for mobile phones)*
+    - responsive layout
+    *("product card" column changes from 1 to 3)*
+- **
 - The **landing page**
     - Offers the user an overview of the side so he knows straight away what the side is about and what is new.
     - Contains the 3 weekend breaks of the month which can be booked, a flyer downloaded or a link with detailed information followed.
