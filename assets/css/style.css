@@ -33,7 +33,7 @@ h3 {
 h1 {
   font-size: 3.5rem;
   margin: -1rem 0 0 0;
-  padding-top: 7rem;
+  padding-top: 11rem;
 }
 
 h2 {
@@ -59,51 +59,77 @@ p {
 }
 
 /* >>> start nav bar */
-/* makes navbar element stick to parent (body) and positions it */
-.nav-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
 /* remove bullets from list elements in nav bar */
-.nav-bar__list {
+.nav-bar {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/* removes the "hamburger" menu", click event showHamburger triggers JavaScript "dropdown_menu"
-to show menu, its position is define in this css rule-set */
-.nav-bar__hamburger {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+/* hide element on mobile view, show at 45em (720px) width */
+.hide-mobile {
   display: none;
-  overflow: auto;
-  padding: 0;
-  position: absolute;
+}
+
+/* default navbar button, size is for mobile first */
+.nav-bar__button {
+  display: inline-block;
+  background: rgb(237, 255, 236);
+  background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(182, 140, 184, 1) 54%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: outset .5rem var(--color-button-text);
+  font-size: 3rem;
+  color: var(--color-button-text);
+  border-radius: 20px;
+  margin: 2rem;
+  width: 6rem;
+  height: 5rem;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 10;
+}
+
+/* nav bar "home" button, its position is fixed to the browser top left corner, moves with the screen (mobile)*/
+.nav-bar__button--home {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+}
+
+/* nav bar hamburger button, its position is fixed to the browser top right corner, moves with the screen (mobile) */
+.nav-bar__button--hamburger {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+.nav-bar__button--hamburger:hover {
+  color: var(--color-text);
+}
+
+/* buttons in the hamburger menu */
+.nav-bar__button--menu {
+  width: 17rem;
+  margin: .3rem;
+}
+
+/* nav bar hamburger menu (background), its position is fixed to the browser top right corner, moves with the screen (mobile) */
+.nav-bar__menu-hamburger {
+  position: fixed;
+  top: 8.5rem;
   right: 1rem;
-  top: 5rem;
-  z-index: 2;
+  width: fit-content;
+  z-index: 10;
+  display: none;
+  list-style: none;
 }
 
 /* JavaScript => dropdown_menu, toggles between hiding and showing the "hamburger" menu,
-rules which are defined hire will be applied to the nav-bar__hamburger rule set when
+rules which are defined hire will be applied to the nav-bar__menu-hamburger rule set when
 click event showHamburger is triggered */
-.show {
+.show-menu-hamburger {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 30rem;
-}
-
-/* home button to flow left on mobile first, background image can show behind,
-button is removed on wider view (.hide-desktop)*/
-.float-left--mobile-first {
-  float: left;
-}
-
-/* float right, background image can show behind */
-.float-right {
-  float: right;
 }
 
 /* <<< end nav bar */
@@ -113,7 +139,7 @@ button is removed on wider view (.hide-desktop)*/
 .header {
   background-color: var(--color-button-text);
   background-image: url(../images/icons/weekend-breaker_logo_icon.png), url(../images/frank-mckenna-eXHeq48Z-Q4-unsplash.webp);
-  background-position: center top 2rem, center;
+  background-position: center top 4.8rem, center;
   background-repeat: no-repeat;
   background-size: 6rem, cover;
 }
@@ -192,6 +218,9 @@ button is removed on wider view (.hide-desktop)*/
 
 .subscribe {
   margin: 1rem;
+  size: 8rem;
+  height: 4rem;
+  font-weight: bold;
 }
 
 /* removes slides which will be displayed later (10seconds) through JavaScript 'shopping_gallery' */
@@ -232,9 +261,9 @@ button is removed on wider view (.hide-desktop)*/
 /* <<< end Fading animation */
 /* <<< end card */
 
-/* >>> start button and menu*/
+/* >>> start button and menu */
+
 .button {
-  /* position: relative; */
   background: rgb(237, 255, 236);
   background: radial-gradient(circle, rgba(237, 255, 236, 1) 0%, rgba(250, 149, 0, 1) 0%, rgba(235, 100, 36, 1) 54%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -251,27 +280,10 @@ button is removed on wider view (.hide-desktop)*/
   text-decoration: none;
 }
 
-/* small button size for mobile first */
-.button--mobile {
-  width: 6rem;
-  height: 4.5rem;
-  margin-right: 2rem;
-}
-
-/* button hidden on mobile first */
-.button--show-desktop {
-  display: none;
-}
-
-/* feedback to user that the element is a button */
+/* feedback to user that the element is a button or link*/
 .button:hover,
-.button:focus {
-  background: var(--color-button-selected);
-}
-
-/* feedback to user that the element is a link */
 footer i:hover {
-  color: var(--color-button-selected);
+  background: var(--color-button-selected);
 }
 
 /* <<< end button and menu */
@@ -423,7 +435,7 @@ footer {
 
 /* <<< end footer */
 
-/* >>> start more_info page */
+/* >>> start "package" page */
 .include-all {
   margin: auto;
   width: fit-content;
@@ -509,7 +521,7 @@ td {
   }
 }
 
-/* <<< end more_info page */
+/* <<< end "package" page */
 
 /* media queries do not take font size from the html element,
 16px == 1em and not 62.5% == 10px == 1em */
@@ -543,56 +555,12 @@ td {
     font-size: 2rem;
   }
 
-  /* hide element when screen expanse */
-  .hide-desktop {
-    display: none;
-  }
-
   /* shows element when screen expanse */
   .button--show-desktop {
     display: inline-block;
     height: 3.44rem;
     margin: 0 5px;
     font-size: 1.6rem;
-  }
-
-  /* changes nav bar elements to inline-block, they are not inside the hamburger any more */
-  .nav-bar__hamburger {
-    /* is needed otherwise elements do not appear */
-    display: inline-block;
-    /* is needed otherwise background dose not float behind navbar */
-    float: left;
-    position: static;
-    top: 5rem;
-    overflow: auto;
-    z-index: 1;
-    list-style: none;
-    box-shadow: none;
-    background-color: transparent;
-    width: 100%;
-    margin-top: 1.5rem;
-    height: auto;
-  }
-
-  .nav-bar__hamburger li {
-    display: inline-block;
-    margin: 0.5rem;
-  }
-
-  .nav-bar__hamburger li:first-child {
-    display: inline-block;
-    margin-left: 0rem;
-  }
-
-  .nav-bar__hamburger .button {
-    width: auto;
-    font-size: 1.3rem;
-    /* margin: auto; */
-  }
-
-  .float-left {
-    float: left;
-    margin-left: 1rem;
   }
 
   /* aligns the subscribe labe, input and button */
@@ -710,13 +678,42 @@ td {
 /* breakpoint for desktop 3 column at 720px == font size standard 16px == 45em */
 @media screen and (min-width: 45em) {
 
-  .nav-bar__hamburger {
-    width: 90%;
-    margin-left: 5%;
+  /* hide element, which was shown on mobile size */
+  .hide-desktop,
+  .nav-bar__button--hamburger {
+    display: none;
   }
 
-  .nav-bar__hamburger .button {
-    font-size: 1.6rem;
+  /* show element, which was hidden on mobile size */
+  .hide-mobile {
+    display: inline;
+  }
+
+  /* positions the parent for the navbar */
+  .nav-bar__menu-hamburger {
+    top: 3.5rem;
+    left: 0;
+    width: 100%;
+    padding: 0 1%;
+    display: block;
+  }
+
+  /* changes nav bar button size  */
+  .nav-bar__button--menu {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 .5rem;
+    font-size: 2rem;
+  }
+
+  /* float nav bar buttons left */
+  .float-left {
+    float: left;
+  }
+
+  /* float nav bar buttons right */
+  .float-right {
+    float: right;
   }
 
   .product-card__heading {
@@ -735,6 +732,16 @@ td {
 
   h2 {
     letter-spacing: 1rem;
+  }
+
+  .nav-bar__menu-hamburger {
+    top: 3.5rem;
+    padding: 0 3%;
+  }
+
+  .nav-bar__button--menu {
+    padding: 0 1rem;
+    font-size: 2.8rem;
   }
 
   .user-quote {

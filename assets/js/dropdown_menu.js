@@ -1,6 +1,6 @@
  /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
  function showHamburger() {
-     document.getElementsByClassName("nav-bar__hamburger")[0].classList.toggle("show");
+     document.getElementsByClassName("nav-bar__menu-hamburger")[0].classList.toggle("show-menu-hamburger");
  }
 
  //  opens the details menu

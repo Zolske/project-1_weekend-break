@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- add bootstrap 5.0.2 -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <!-- add bootstrap 5.0.2 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- sets different browser styles to basic -->
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -26,65 +23,72 @@
 <body>
 
     <!-- >>> start nav bar -->
-    <nav class="nav-bar">
-        <ul class="nav-bar__list">
-            <!-- button which links to home page, only shown on mobile first, removed on wider screen size (hide-desktop)-->
-            <li>
-                <a href="index.html" class="button button--mobile hide-desktop float-left--mobile-first"
-                    title="go to home page" aria-label="go to home page">
+    <nav>
+        <ul class="nav-bar">
+            <!-- hides element on wider screen sizes (over 45em, 720px) -->
+            <li class="hide-desktop">
+                <a href="index.html" title="go to home page" aria-label="go to home page"
+                    class="nav-bar__button nav-bar__button--home">
                     <i class="fas fa-home"></i>
                 </a>
             </li>
             <li>
                 <!--"hamburger button": showHamburger(), JavaScript => dropdown_menu.js, toggles between showing & hiding "hamburger menu" -->
-                <button class="button button--mobile hide-desktop float-right" onclick="showHamburger()"
+                <button class="nav-bar__button nav-bar__button--hamburger" onclick=" showHamburger()"
                     aria-label="opens sub menu" title="opens sub menu">
                     <i class="fas fa-bars"></i>
                 </button>
-            </li>
-        </ul>
-        <!-- "hamburger menu, styles are defined in css (display: none), JavaScript targets hamburger_menu[0] class to show, is trigger through click event on "hamburger button" -->
-        <ul class="nav-bar__hamburger nav-bar__list">
-            <!-- home button dose not appear on mobile first but when screen gets wider -->
-            <li class="float-left">
-                <a href="index.html" class="button button--show-desktop" title="go to home page"
-                    aria-label="go to home page">
-                    <i class="fas fa-home"></i> home
-                </a>
-            </li>
-            <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
-            <li class="float-right float-left">
-                <a href="booking.html" class="button" title="go to booking page" aria-label="go to booking page">
-                    <i class="fas fa-shopping-cart"></i> book
-                </a>
-            </li>
-            <!-- float-right is true on mobile first but gets overwritten on wider screen with float-left -->
-            <li class="float-right float-left">
-                <a href="more_info.html" class="button" title="go to package info page"
-                    aria-label="go to package info page">
-                    <i class="fas fa-info"></i> package
-                </a>
-            </li>
-            <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
-            <li class="float-right">
-                <a href="index.html#faq" class="button" onclick="detailsOpener_faq()"
-                    title="go to faq section on the home page" aria-label="go to faq section on home page">
-                    <i class="far fa-question-circle"></i> faq
-                </a>
-            </li>
-            <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
-            <li class="float-right">
-                <a href="index.html#about_us" class="button" onclick="detailsOpener_about_us()"
-                    title="go to about us section on the home page" aria-label="go to about_us section on home page">
-                    <i class="fas fa-user-tie"></i> about us
-                </a>
-            </li>
-            <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
-            <li class="float-right">
-                <a href="index.html#contact_us" class="button" onclick="detailsOpener_contact_us()"
-                    title="go to contact section on the home page" aria-label="go to contact_us section on home page">
-                    <i class="fas fa-address-book"></i> contact
-                </a>
+                <ul class="nav-bar__menu-hamburger">
+                    <!-- element is hidden on screen sizes smaller than 45em (720px) -->
+                    <li class="hide-mobile">
+                        <!-- floats left on wider screen sizes 45em (720px) -->
+                        <a href="index.html" title="go to home page" aria-label="go to home page"
+                            class="nav-bar__button nav-bar__button--menu float-left">
+                            <i class="fas fa-home"></i> home
+                        </a>
+                    </li>
+                    <li>
+                        <!-- floats left on wider screen sizes 45em (720px) -->
+                        <a href="booking.html" class="nav-bar__button nav-bar__button--menu float-left"
+                            title="go to booking page" aria-label="go to booking page">
+                            <i class="fas fa-shopping-cart"></i> book
+                        </a>
+                    </li>
+                    <li>
+                        <!-- floats left on wider screen sizes 45em (720px) -->
+                        <a href="more_info.html" class="nav-bar__button nav-bar__button--menu float-left"
+                            title="go to package info page" aria-label="go to package info page">
+                            <i class="fas fa-info"></i> package
+                        </a>
+                    </li>
+                    <li>
+                        <!--detailsOpener_faq(), JavaScript => dropdown_menu, opens the html <details> -->
+                        <!-- floats right on wider screen sizes 45em (720px) -->
+                        <a href="index.html#faq" class="nav-bar__button nav-bar__button--menu float-right"
+                            onclick="detailsOpener_faq()" title="go to faq section on the home page"
+                            aria-label="go to faq section on home page">
+                            <i class="far fa-question-circle"></i> faq
+                        </a>
+                    </li>
+                    <li>
+                        <!--detailsOpener_about_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                        <!-- floats right on wider screen sizes 45em (720px) -->
+                        <a href="index.html#about_us" class="nav-bar__button nav-bar__button--menu float-right"
+                            onclick="detailsOpener_about_us()" title="go to about us section on the home page"
+                            aria-label="go to about_us section on home page">
+                            <i class="fas fa-user-tie"></i> about us
+                        </a>
+                    </li>
+                    <li>
+                        <!--detailsOpener_contact_us(), JavaScript => dropdown_menu, opens the html <details> -->
+                        <!-- floats right on wider screen sizes 45em (720px) -->
+                        <a href="index.html#contact_us" class="nav-bar__button nav-bar__button--menu float-right"
+                            onclick="detailsOpener_contact_us()" title="go to contact section on the home page"
+                            aria-label="go to contact_us section on home page">
+                            <i class="fas fa-address-book"></i> contact
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
@@ -570,8 +574,7 @@
                         </header>
                         <blockquote class="user-quote"><i class="fas fa-quote-left"></i>&nbsp;I had the best time of my
                             life !!! I recommend everyone to take a break from what you are doing now and just get out
-                            for a
-                            few days, do and see something new. Just live your life.&nbsp;
+                            for a few days, do and see something new. Just live your life.&nbsp;
                             <i class="fas fa-quote-right"></i></blockquote>
                     </div>
                     <!-- user_5 -->
@@ -794,11 +797,6 @@
     <!-- connection to "Font Awesome" -->
     <script src="https://kit.fontawesome.com/c1f0cff9f2.js" crossorigin="anonymous"></script>
 
-    <!-- connection to "bootstarp" -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
-        async defer>
-    </script> -->
     <!-- connection to "bootstarp" -->
     <script src="assets/js/bootstrap.min.js"></script>
 
