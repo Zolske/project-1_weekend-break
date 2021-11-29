@@ -170,7 +170,6 @@ click event showHamburger is triggered */
 
 .subscribe {
   margin: 1rem;
-  size: 8rem;
   height: 4rem;
   font-weight: bold;
   text-align: center;
@@ -624,7 +623,7 @@ td {
 
   /* >>> start faq */
   .answer-faq {
-    size: 2.4rem;
+    font-size: 2.4rem;
   }
 
   /* >>> start contact us */
