@@ -119,7 +119,7 @@ The site uses colors which remained the user on summer.
 The colers are not too intense, to get the user in a more relaxed mood.
 
 The site also uses gradients, to mix the main colors together.
-![color palette](assets/images/doc/gradient.JPG)
+![color palette](assets/images/doc/gradient.jpg)
 *(the gradient was created with [cssgradient](https://cssgradient.io/))*
 
 This style creates a easy summery look.
