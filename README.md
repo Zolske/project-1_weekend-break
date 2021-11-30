@@ -113,13 +113,15 @@ The site uses colors which remained the user on summer.
 - blue, like the see or sky
 - yellow like the beach or sun  
 
-![color palette](assets/images/doc/color-palaete-vertical.JPG)
+![color palette](assets/images/doc/color-palaete-vertical.JPG)  
+
 *(the palette has been created with [coolors](https://coolors.co/))*  
 
 The colers are not too intense, to get the user in a more relaxed mood.
 
 The site also uses gradients, to mix the main colors together.
-![color palette](assets/images/doc/gradient.jpg)
+![color palette](assets/images/doc/gradient.jpg)  
+
 *(the gradient was created with [cssgradient](https://cssgradient.io/))*
 
 This style creates a easy summery look.
