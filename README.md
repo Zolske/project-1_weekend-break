@@ -124,13 +124,30 @@ The site also uses gradients, to mix the main colors together.
 This style creates a easy summery look.
 
 ## Font Style
-Uses with the standard font 
+Standard fonts have been used, to increase maximum compatibility and give the user a font-style he is familiar with.  
+
+There is a "cursive" font used beneath the product cards to create a handwritten style. 
 
 ---
-## Testing
+# Testing
+## HTML validation - Nu Html Checker
+- **home page (index.html):** link to html validator site "Nu Html Checker" [with index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Findex.html)
+- **book page (booking.html):** link to html validator site "Nu Html Checker" [with booking.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fbooking.html)
+- **book page (booking.html):** link to html validator site "Nu Html Checker" [with booking.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fbooking.html)
 
-### Validator Testing
+- **no errors or warnings**  
 
+![nu html checker](assets/images/doc/html-validator.jpg)
+
+***
+## CSS validation - W3C CSS Validator
+- link to W3C CSS Validator site [w3c css validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- **no errors but 240 warnings**
+    - the warnings are related to bootstrap and normalize.css  
+
+![css checker](assets/images/doc/css-validator.jpg)
+
+![css badge](assets/images/doc/vcss.gif) ![css-blue badge](assets/images/doc/vcss-blue.gif)
 ### Unfixed Bugs
 
 ---
