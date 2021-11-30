@@ -1,4 +1,5 @@
 # The Weekend breaker
+[link to the "weekend breaker"](https://zolske.github.io/project-1_weekend-break/index.html)
 ## An Overview
 
 The website offers 3 different weekend break packages for the user to choose from. The packages change every month.
@@ -133,7 +134,7 @@ There is a "cursive" font used beneath the product cards to create a handwritten
 ## HTML validation - Nu Html Checker
 - **home page (index.html):** link to html validator site "Nu Html Checker" [with index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Findex.html)
 - **book page (booking.html):** link to html validator site "Nu Html Checker" [with booking.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fbooking.html)
-- **book page (booking.html):** link to html validator site "Nu Html Checker" [with booking.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fbooking.html)
+- **package page (more_info.html):** link to html validator site "Nu Html Checker" [with more_info.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fmore_info.html)
 
 - **no errors or warnings**  
 
@@ -141,25 +142,74 @@ There is a "cursive" font used beneath the product cards to create a handwritten
 
 ***
 ## CSS validation - W3C CSS Validator
-- link to W3C CSS Validator site [w3c css validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- **no errors but 240 warnings**
+- **home page (index.html):** link to W3C CSS Validator site [with index.html](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- **book page (booking.html):** link to W3C CSS Validator site [with booking.html](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fbooking.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- **package page (more_info.html):** link to W3C CSS Validator site [with more_info.html](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fzolske.github.io%2Fproject-1_weekend-break%2Fmore_info.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- **no errors but 240 (244 on package) warnings**
     - the warnings are related to bootstrap and normalize.css  
 
 ![css checker](assets/images/doc/css-validator.jpg)
 
 ![css badge](assets/images/doc/vcss.gif) ![css-blue badge](assets/images/doc/vcss-blue.gif)
-### Unfixed Bugs
+## lighthouse validator
+- **home page (index.html): - mobile**  
+![index.html mobile](assets/images/doc/lighthouse-index-mobile.jpg)
+- **home page (index.html): - desktop**  
+![index.html desktop](assets/images/doc/lighthouse-index-desktop.jpg)
 
----
+# Credits
+## code
+### w3schools
+Is a very usefully side to look basics up and to get inspiration for layouts / elements.
+- the idea for the nav bar came from the side but originally it was stick but changed later changed to fixed  
 
-## Deployment
+    see link: [How TO - Sticky/Affix Navbar](https://www.w3schools.com/howto/howto_js_navbar_sticky.asp)
+- the idea for the slide show for the product card is from here, but I adjusted the source code  
+see link: [How TO - Slideshow](https://www.w3schools.com/howto/howto_js_slideshow.asp)
 
----
+- the idea for the responsive image grid is from here (used on package page) but I needed to change code because images are not as a sprite  
+see link: [How TO - Responsive Image Grid](https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp)  
+### coding with Mosh
+He makes very good videos, to the point, motivating voice, essential.  
+- I have watched the html / css course, the idea for the sprites and the performance boost is from here  
+see link: [Complete HTML5/CSS3 Course from Zero to Hero](https://codewithmosh.com/p/the-ultimate-html-css)
+### bootstrap
+Has a lot of elements which can be used. How ever, I experienced some issues with bootstrap and normalize.css.
+- I used an image carousel for the user comments.
+see link: [With indicators](https://getbootstrap.com/docs/5.0/components/carousel/)
 
-## Credits
+***
+## tools
 
-### Content
+### Responsive CSS Sprites
+Creates **responsive** sprites! Is a free online tool,
+- I used the tool to create the responsive sprites from the "package" page  
+see link: [Responsive CSS Sprites](https://responsive-css.spritegen.com/)
 
-### Media
+### Coolors
+- to create the color palette.  
 
+    see link: [coolors](https://coolors.co/)
+
+### cssgradient
+- very good tool to create gradients.  
+
+    see link: [cssgradient](https://cssgradient.io/)
+***
+## Icons
+- are provided by [Font Awesome](https://fontawesome.com/)
+***
+## Logo
+- inspired by an icon I found in the internet, but I have changed it
+***
+## Media
+- all images have been taking from [unsplashed](https://unsplash.com/)
+***
+## Acknowledgements
+- My special thanks to ...
+    - my mentor, Mr. Spencer Barriball for his motivation and advise
+    - [code institute](https://codeinstitute.net/), for there support and leaning material
+***
+## Disclaimer
+- The information provided on this website is only an demonstration of my skills, the company "the weekend breaker" dose not exist.
 
